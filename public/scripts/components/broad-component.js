@@ -2,14 +2,39 @@
     var broadComponent = {
         template: `
             <h1>this is the broadComponent</h1>
-            <div>
-                <a ng-repeat="items in $ctrl.broadArr" href=""> {{ items }} </a>
+            <div class="broad">
+                <a ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </a>
+            </div>
+            <div class="narrow">
+                <a ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </a>
             </div>
 `,
-        controller: function() {
+        controller: function(FlavorService) {
             var $ctrl = this;
-            $ctrl.broadArr = ["nutty", "roasted", "spicy", "floral", "earthy", "sour"];
+            $ctrl.narrowFlav = [];
+            $ctrl.subFlavor = "";
+            // pseudo db
+            $ctrl.broadArr = [{name: "nutty", flavor: ["chocolate", "toasted marshmallow", "peanut brittle", "raw almond"]},
+                {name: "roasted", flavor: ["milk chocolate", "dark chocolate", "black cherry", "fresh roasted peanut"]},
+                {name: "spicy", flavor: ["graham cracker", "granola", "cloves", "peanut shell"]},
+                {name: "floral", flavor: ["berry tea", "herbal", "blueberry", "tart cherry", "green tea"]},
+                {name: "earthy", flavor: ["clay", "buttered toast"]},
+                {name: "sour", flavor: ["apple skin", "pear", "toffee", "lime zest", "orange pith"]}];
 
+            $ctrl.getFlavor = function(value) {
+                // assign narrowFlav
+                $ctrl.narrowFlav = value.flavor;
+                console.log(value.name);
+            };
+
+            $ctrl.getSubFlavor = function(value){
+                // pull in narrowFlav and assign bean
+                console.log("hey " + value);
+                $ctrl.subFlavor = value;
+                console.log("bye " + $ctrl.subFlavor);
+                // passing sub flavor to service
+                FlavorService.setBean(value);
+            };
         }
     };
 

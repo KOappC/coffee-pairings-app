@@ -3,7 +3,7 @@
         template: `
             <h1>narrow component HERE</h1>
             <div>
-                <a ng-repeat="items in $ctrl.nuttyArr" href=""> {{ items }} </a>
+                <a ng-repeat="items in $ctrl.nuttyArr" href="" ng-click=""> {{ items }} </a>
             </div>
 `,
         controller: function() {

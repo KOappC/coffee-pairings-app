@@ -5,10 +5,15 @@
         <div>
             <p> {{ $ctrl.beanInfo }} </p>
         </div>
+        <div>
+            <button>pairings</button>
+            <button>locations</button>
+        </div>
         `,
-        controller: function() {
+        controller: function(FlavorService) {
             var $ctrl = this;
-            $ctrl.beanInfo = "tastes like coffee, you drink it";
+            // pull in and return bean selection
+            $ctrl.beanInfo = FlavorService.getBean();
         }
     };
 
