@@ -1,19 +1,14 @@
 (function() {
     var narrowComponent = {
         template: `
-            <h1>narrow component HERE</h1>
+            <h1>list of all beans</h1>
             <div>
-                <a ng-repeat="items in $ctrl.nuttyArr" href="" ng-click=""> {{ items }} </a>
+                <p>all the coffees from the database</p>
             </div>
 `,
         controller: function() {
             var $ctrl = this;
-            $ctrl.nuttyArr = ["chocolate", "toasted marshmallow", "peanut brittle", "raw almond"];
-            $ctrl.roastedArr = ["milk chocolate", "dark chocolate", "black cherry", "fresh roasted peanut"];
-            $ctrl.spicyArr = ["graham cracker", "granola", "cloves", "peanut shell"];
-            $ctrl.floralArr = ["berry tea", "herbal", "blueberry", "tart cherry", "green tea"];
-            $ctrl.earthyArr = ["clay", "buttered toast"];
-            $ctrl.sourArr = ["apple skin", "pear", "toffee", "lime zest", "orange pith"];
+            // need to pull all beans from the database and display here
         }
     };
 

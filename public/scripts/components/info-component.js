@@ -1,7 +1,7 @@
 (function() {
     var infoComponent = {
         template: `
-        <h1>This is the info component</h1>
+        <h1>Here's your bean!</h1>
         <div>
             <p> {{ $ctrl.beanInfo }} </p>
         </div>
@@ -14,20 +14,21 @@
             <button ng-click="$ctrl.getPairings();">pairings</button>
             <button ng-click="$ctrl.getLocations();">locations</button>
         </div>
-        <!--<div id="pairings">
+        <div id="pairings">
             <ul>
-                <li ng-repeat=""></li>
+                <h3>Pairings:</h3>
+                <li> {{ $ctrl.beanInfo }} </li> <!-- pairings filtered by way of this variable...maybe -->
             </ul>
-        </div>-->
+        </div>
         <div id="locations">
             <ul>
+                <h3>Locations:</h3>
                 <li> {{ $ctrl.beanInfo }} </li> <!-- locations from array of objects with locations, but using bean not the broad -->
             </ul>
         </div>
         `,
         controller: function(FlavorService) {
             var $ctrl = this;
-            $ctrl.thisLocationNotForeverPleaseRemember = "Starbucks!";
 
             // pull in and return bean selection
             $ctrl.beanInfo = FlavorService.getBean();
@@ -36,14 +37,13 @@
             $ctrl.simBean = FlavorService.getSimBean();
 
             // pairings
-            $ctrl.pairings = "apple pie";
             $ctrl.getPairings = function() {
-                console.log("probably chocolate or blueberry pie");
+                console.log("clicking this will show/hide by use of a directive...later");
             };
 
             // locations
             $ctrl.getLocations = function() {
-                console.log($ctrl.beanInfo);
+                console.log("clicking this will show/hide by use of a directive, in the future");
                 // show locations that subFlavor from service is available
                 // beanInfo is used...somehow...for this
             };

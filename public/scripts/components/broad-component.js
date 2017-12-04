@@ -1,7 +1,7 @@
 (function() {
     var broadComponent = {
         template: `
-            <h1>this is the broadComponent</h1>
+            <h1>Make a choice</h1>
             <div class="broad">
                 <a ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </a>
             </div>

@@ -5,14 +5,14 @@
         var simBean = [];
 
         return {
+            // holds the bean choice
             getBean: getBean,
             setBean: setBean,
-            // get pairings - pass in pairings for selected bean
             // similar beans
             getSimBean: getSimBean,
-            setSimBean: setSimBean,
-            // locations
-            setLocations: setLocations
+            setSimBean: setSimBean
+            // get pairings (maybe needed)
+            // locations (maybe needed)
         };
         // bean choice
         function getBean() {
@@ -40,11 +40,7 @@
         }
 
         // locations
-        function setLocations(info) {
-            // setting location based on bean for later filtering of db
-            // take subFlavor and filter locations with it
 
-        }
 
 
 
