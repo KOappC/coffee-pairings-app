@@ -4,7 +4,7 @@ var pg = require("pg");
 var bodyParser = require("body-parser");
 var routes = require("./routes.js");
 
-app.use(express.static(__dirname + "./public"));
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 app.use("/", routes);
 
