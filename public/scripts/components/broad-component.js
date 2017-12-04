@@ -35,6 +35,7 @@
                 // passing sub flavor to service
                 FlavorService.setBean(value);
             };
+
         }
     };
 

@@ -6,6 +6,7 @@
         return {
             getBean: getBean,
             setBean: setBean
+            // get pairings - pass in pairings for selected bean
         };
 
         function getBean() {
@@ -19,6 +20,7 @@
             // goes to info page
             $location.path("/info");
         }
+
 
 
 
