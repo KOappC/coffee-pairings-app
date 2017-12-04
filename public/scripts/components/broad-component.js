@@ -24,17 +24,17 @@
             $ctrl.getFlavor = function(value) {
                 // assign narrowFlav
                 $ctrl.narrowFlav = value.flavor;
-                console.log(value.name);
+                FlavorService.setSimBean(value.name);
             };
 
-            $ctrl.getSubFlavor = function(value){
+            $ctrl.getSubFlavor = function(value) {
                 // pull in narrowFlav and assign bean
-                console.log("hey " + value);
                 $ctrl.subFlavor = value;
-                console.log("bye " + $ctrl.subFlavor);
                 // passing sub flavor to service
                 FlavorService.setBean(value);
             };
+
+            //function here to send subflavor to service to info
 
         }
     };
