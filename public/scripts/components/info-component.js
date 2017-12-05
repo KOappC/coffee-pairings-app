@@ -7,7 +7,7 @@
         </div>
         <div>
             <ul>
-                <li> {{ $ctrl.simBean }} </li>
+                <li ng-repeat="items in $ctrl.simBean"> {{ items }} </li>
             </ul>
         </div>
         <div> <!-- directive that changes display to block or whatever to display on page -->
