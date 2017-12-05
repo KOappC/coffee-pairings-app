@@ -19,4 +19,4 @@ const config = {
     ssl: params.hostname !== 'localhost'
 };
 
-module.exports = new pg.pool(config);
+module.exports = new pg.Pool(config);
