@@ -5,7 +5,7 @@ var pool = new pg.Pool({
     password: "password",
     host: "localhost",
     port: 5432,
-    database: "demo",
+    database: "coffee",
     ssl: false
 });
 

@@ -14,6 +14,14 @@
             $ctrl.narrowFlav = [];
             $ctrl.subFlavor = "";
             // pseudo db
+
+            /*
+                NEED TO:
+                ﻿select DISTINCT broad from tasting;   <-- get request to retrieve all broad tastings
+                NEED TO:
+                find a command to get narrow1 and narrow2 data from database
+            */
+
             $ctrl.broadArr = [{name: "nutty", flavor: ["chocolate", "toasted marshmallow", "peanut brittle", "raw almond"]},
                 {name: "roasted", flavor: ["milk chocolate", "dark chocolate", "black cherry", "fresh roasted peanut"]},
                 {name: "spicy", flavor: ["graham cracker", "granola", "cloves", "peanut shell"]},
