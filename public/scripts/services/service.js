@@ -3,11 +3,13 @@
 
         var subFlavor = {};
         var simBean = [];
+        var beanPass = "";
 
         return {
             // holds the bean choice
             getBean: getBean,
             setBean: setBean,
+            passBean: passBean,
             // similar beans
             getSimBean: getSimBean,
             setSimBean: setSimBean
@@ -19,20 +21,27 @@
             return subFlavor;
         }
 
+        function passBean() {
+            return beanPass;
+        }
+
         function setBean(info) {
             // setting subFlavor to value of sub flavor clicked
             subFlavor = info;
             // subFlavor = info.name (name of the subFlavor) info.bean (name of bean for use in other functions)
-            // MAKE THIS GO ONE STEP FURTHER AND ASSIGN TO A BEAN
             // goes to info page
             return $http({
                 method: "GET",
                 url: "/beans/" + subFlavor
             }).then(function(response) {
-                console.log(response);
-                return response;
+                beanPass = response.data[0].bean;
+                console.log(beanPass);
+                $location.path("/info");
+                return {
+                    response,
+                    beanPass
+                };
             });
-            // $location.path("/info");
 
             /*      NEED TO DO
                     pass this sql command to DB

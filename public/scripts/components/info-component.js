@@ -3,7 +3,7 @@
         template: `
         <h1>Here's your bean!</h1>
         <div>
-            <p> {{ $ctrl.beanInfo }} </p>
+            <p> {{ $ctrl.beanChoice }} </p>
         </div>
         <div>
             <ul>
@@ -29,6 +29,8 @@
         `,
         controller: function(FlavorService) {
             var $ctrl = this;
+
+            $ctrl.beanChoice = FlavorService.passBean();
 
             // pull in and return bean selection
             $ctrl.beanInfo = FlavorService.getBean();
