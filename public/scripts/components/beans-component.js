@@ -1,8 +1,11 @@
 (function() {
     var beansComponent = {
         template: `
-            <h1>list of all beans</h1>
-            <div>
+            <div class="menu-bar"> <!-- menu bar -->
+                <h1 class="page-title">Coffee Title</h1>
+            </div>
+            
+            <div class="all-beans"> <!-- ng-repeat the beans from DB -->
                 <p>all the coffees from the database</p>
             </div>
 `,

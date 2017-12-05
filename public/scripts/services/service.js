@@ -83,7 +83,6 @@
                 url: "/beans/" + subFlavor
             }).then(function(response) {
                 beanArray = response;
-                console.log(beanArray);
                 return {
                     response,
                     beanArray

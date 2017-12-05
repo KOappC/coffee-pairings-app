@@ -1,33 +1,40 @@
 (function() {
     var infoComponent = {
         template: `
-        <h1>Here's your bean!</h1>
-        <div>
-            <p> {{ $ctrl.beanChoice }} </p>
+        <div class="menu-bar"> <!-- menu bar -->
+                <h1 class="page-title">Coffee Title</h1>
+            </div>
+        
+        <!-- body -->
+        <div class="flavor-body">
+            <div id="final-bean">
+                <p> {{ $ctrl.beanChoice }} </p>
+                <ul>
+                    <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
+                </ul>
+            </div>
+            <div> <!-- directive that changes display to block or whatever to display on page -->
+                <div id="show-locations" ng-click="$ctrl.getLocations();">locations</div>
+                <div id="show-pairings">pairings</div>
+            </div>
+            <p class="back-button" ng-click="$ctrl.goBack();">back</p>
+        <!-- hidden divs -->
+            <div id="pairings">
+                <ul>
+                    <h3>Pairings:</h3>
+                    <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li>
+                </ul>
+            </div>
+            <div id="locations">
+                <ul>
+                    <h3>Locations:</h3>
+                    <li> Coffee shops near you! </li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <ul>
-                <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
-            </ul>
-        </div>
-        <div> <!-- directive that changes display to block or whatever to display on page -->
-            <button>pairings</button>
-            <button ng-click="$ctrl.getLocations();">locations</button>
-        </div>
-        <div id="pairings">
-            <ul>
-                <h3>Pairings:</h3>
-                <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li> <!-- pairings filtered by way of this variable...maybe -->
-            </ul>
-        </div>
-        <div id="locations">
-            <ul>
-                <h3>Locations:</h3>
-                <li> Coffee shops near you! </li> <!-- locations from array of objects with locations, but using bean not the broad -->
-            </ul>
-        </div>
+        
         `,
-        controller: function(FlavorService) {
+        controller: function(FlavorService, $location) {
             var $ctrl = this;
 
             $ctrl.beanChoice = FlavorService.passBean();
@@ -47,6 +54,11 @@
                 // show locations that subFlavor from service is available
                 // beanInfo is used...somehow...for this
             };
+
+            // back button path
+            $ctrl.goBack = function() {
+                $location.path("/flavors");
+            }
         }
     };
 

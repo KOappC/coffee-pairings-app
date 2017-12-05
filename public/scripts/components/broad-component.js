@@ -1,15 +1,20 @@
 (function() {
     var broadComponent = {
         template: `
-            <h1>Make a choice</h1>
-            <div class="broad">
-                <a ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </a>
+            <div class="menu-bar"> <!-- menu bar -->
+                <h1 class="page-title">Coffee Title</h1>
             </div>
-            <div class="narrow">
-                <a ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </a>
+            <div class="flavor-body">
+                <div class="broad"> <!-- broad choices -->
+                    <div class="little-circles" ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </div>
+                </div>
+                <div class="narrow"> <!-- narrow choices -->
+                    <div ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </div>
+                </div>
+                <p class="back-button" ng-click="$ctrl.goBack();">back</p>
             </div>
 `,
-        controller: function(FlavorService) {
+        controller: function(FlavorService, $location) {
             var $ctrl = this;
             $ctrl.narrowFlav = [];
             $ctrl.subFlavor = "";
@@ -36,6 +41,11 @@
             };
 
             //function here to send subflavor to service to info
+
+            // back button path
+            $ctrl.goBack = function() {
+                $location.path("/home");
+            }
 
         }
     };
