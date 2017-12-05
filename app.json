@@ -1,0 +1,5 @@
+{
+  "name": "coffee-pairing-app",
+  "description": "final project",
+  "image": "heroku/nodejs"
+}
