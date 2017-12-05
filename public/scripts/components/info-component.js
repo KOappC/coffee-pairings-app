@@ -11,13 +11,13 @@
             </ul>
         </div>
         <div> <!-- directive that changes display to block or whatever to display on page -->
-            <button ng-click="$ctrl.getPairings();">pairings</button>
+            <button>pairings</button>
             <button ng-click="$ctrl.getLocations();">locations</button>
         </div>
         <div id="pairings">
             <ul>
                 <h3>Pairings:</h3>
-                <li> {{ $ctrl.beanInfo }} </li> <!-- pairings filtered by way of this variable...maybe -->
+                <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li> <!-- pairings filtered by way of this variable...maybe -->
             </ul>
         </div>
         <div id="locations">
@@ -39,9 +39,7 @@
             $ctrl.simBean = FlavorService.getSimBean();
 
             // pairings
-            $ctrl.getPairings = function() {
-                console.log("clicking this will show/hide by use of a directive...later");
-            };
+            $ctrl.getPairings = FlavorService.getPairings();
 
             // locations
             $ctrl.getLocations = function() {

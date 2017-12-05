@@ -6,6 +6,8 @@
         var beanArray = [];
         var finalSimBeanArray = [];
         var beanPass = "";
+        var pairings = [];
+        var finalPairings = [];
 
         return {
             // holds the bean choice
@@ -14,8 +16,9 @@
             passBean: passBean,
             // similar beans
             getSimBean: getSimBean,
-            setSimBean: setSimBean
+            setSimBean: setSimBean,
             // get pairings (maybe needed)
+            getPairings: getPairings
             // locations (maybe needed)
         };
         // bean choice
@@ -49,14 +52,22 @@
                 // pushing the similar beans to the finalSimBeanArray
                 beanArray = response.data.forEach(function(info) {
                     finalSimBeanArray.push(info.bean);
-                    return info.bean;
+                    //return info.bean;
                 });
+
+                // pairings
+                pairings = response.data.forEach(function(info) {
+                    finalPairings.push(info.pairing1, info.pairing2);
+                });
+
+                console.log(finalPairings);
                 console.log(finalSimBeanArray);
                 $location.path("/info");
                 return {
                     response,
                     beanPass,
-                    beanArray
+                    beanArray,
+                    pairings
                 };
             });
 
@@ -80,6 +91,11 @@
                     beanArray
                 };
             });
+        }
+
+        // pairings
+        function getPairings() {
+            return finalPairings;
         }
 
         // locations
