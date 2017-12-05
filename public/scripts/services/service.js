@@ -18,7 +18,7 @@
             getSimBean: getSimBean,
             setSimBean: setSimBean,
             // get pairings (maybe needed)
-            getPairings: getPairings
+            getPairings: getPairings,
             // locations (maybe needed)
         };
         // bean choice
@@ -60,8 +60,6 @@
                     finalPairings.push(info.pairing1, info.pairing2);
                 });
 
-                console.log(finalPairings);
-                console.log(finalSimBeanArray);
                 $location.path("/info");
                 return {
                     response,
@@ -110,9 +108,6 @@
             http request that gets DISTINCT value of narrow1 and narrow2
             THEN passes them to broad-component as broadArr.flavor
         */
-
-
-
 
 
     }

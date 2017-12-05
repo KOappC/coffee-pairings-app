@@ -5,13 +5,16 @@
         .config(function($routeProvider) {
             $routeProvider
                 .when("/home", {
-                    template: `<broad-component></broad-component>`
+                    template: `<welcome-component></welcome-component>`
                 })
                 .when("/flavors", {
-                    template: `<narrow-component></narrow-component>`
+                    template: `<broad-component></broad-component>`
                 })
                 .when("/info", {
                     template: `<info-component></info-component>`
+                })
+                .when("/beans", {
+                    template: `<beans-component></beans-component>`
                 })
                 .otherwise("/home")
         });

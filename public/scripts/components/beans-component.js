@@ -1,5 +1,5 @@
 (function() {
-    var narrowComponent = {
+    var beansComponent = {
         template: `
             <h1>list of all beans</h1>
             <div>
@@ -14,5 +14,5 @@
 
     angular
         .module("app")
-        .component("narrowComponent", narrowComponent);
+        .component("beansComponent", beansComponent);
 })();
