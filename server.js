@@ -8,7 +8,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 app.use("/", routes);
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 5000;
 var server = app.listen(port, function(req, res) {
-    console.log("Server is up and running.  Listening on local host port :8080")
+    console.log("Server is up and running.  Listening on localhost:" + port)
 });
