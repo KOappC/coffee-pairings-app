@@ -7,7 +7,7 @@
         </div>
         <div>
             <ul>
-                <li ng-repeat="items in $ctrl.simBean"> {{ items }} </li>
+                <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
             </ul>
         </div>
         <div> <!-- directive that changes display to block or whatever to display on page -->
@@ -23,7 +23,7 @@
         <div id="locations">
             <ul>
                 <h3>Locations:</h3>
-                <li> {{ $ctrl.beanInfo }} </li> <!-- locations from array of objects with locations, but using bean not the broad -->
+                <li> Coffee shops near you! </li> <!-- locations from array of objects with locations, but using bean not the broad -->
             </ul>
         </div>
         `,

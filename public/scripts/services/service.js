@@ -100,6 +100,17 @@
 
         // locations
 
+        // primary flavors
+        /*
+            http request that gets DISTINCT value of broad
+            THEN passes them to broad-component
+        */
+        // secondary flavors
+        /*
+            http request that gets DISTINCT value of narrow1 and narrow2
+            THEN passes them to broad-component as broadArr.flavor
+        */
+
 
 
 
