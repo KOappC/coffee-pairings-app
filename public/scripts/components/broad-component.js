@@ -3,6 +3,7 @@
         template: `
             <div class="menu-bar"> <!-- menu bar -->
                 <h1 class="page-title">Coffee Title</h1>
+                <i id="hamburger" class="material-icons">dehaze</i>
             </div>
             <div class="flavor-body">
                 <div id="coffee-bean">

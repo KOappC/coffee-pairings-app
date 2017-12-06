@@ -12,6 +12,7 @@ body {
     font-weight: 400;
     font-style: italic;
     color: #BEB5A4;
+    display: inline-block;
 }
 
 #welcome-title {
@@ -56,18 +57,21 @@ body {
 /* flavors page */
 
 .menu-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: #3C2E21;
     width: 100%;
     height: 80px;
     position: absolute;
     top: 0;
     left: 0;
-    padding-left: 5%;
 }
 
 .menu-bar h1 {
     font-size: 46px;
     margin-top: 10px;
+    padding-left: 5%;
 }
 
 .flavor-body {
@@ -269,3 +273,68 @@ body {
 	padding-right: 15px;
 }
 
+/* NAV */
+
+#hamburger {
+  color: #6583bc;
+  font-size: 49px;
+  position: relative;
+  top: 18px;
+  padding-right: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .broad {
+        display:flex;
+        position: static;
+    }
+
+    .little-circles {
+        height: 175px;
+        width: 444px;
+        border-radius: 0;
+        position: static;
+    }
+
+    .little-circles:nth-child(1) {
+        position: static;
+        background-color: #e22149;
+        border: 2px solid #e22149;
+        box-shadow: inset 0 0 0 8px #beb5a4;
+    }
+
+    .little-circles:nth-child(2) {
+        position: static;
+        background-color: #484932;
+        border: 2px solid #484932;
+        box-shadow: inset 0 0 0 8px #beb5a4;
+    }
+
+    .little-circles:nth-child(3) {
+        position: static;
+        background-color: #6583bc;
+        border: 2px solid #6583bc;
+        box-shadow: inset 0 0 0 8px #beb5a4;
+    }
+
+    .little-circles:nth-child(4) {
+        position: static;
+        background-color: #c87029;
+        border: 2px solid #c87029;
+        box-shadow: inset 0 0 0 8px #beb5a4;
+    }
+
+    .little-circles:nth-child(5) {
+        position: static;
+        background-color: #f8ca34;
+        border: 2px solid #f8ca34;
+        box-shadow: inset 0 0 0 8px #beb5a4;
+    }
+
+    .little-circles:nth-child(6) {
+        position: static;
+        background-color: #58549d;
+        border: 2px solid #58549d;
+        box-shadow: inset 0 0 0 8px #beb5a4;
+    }
+}
