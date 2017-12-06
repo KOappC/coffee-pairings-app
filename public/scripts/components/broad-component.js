@@ -12,7 +12,7 @@
                     <div circle-colors class="little-circles" ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </div>
                 </div>
                 <div class="narrow"> <!-- narrow choices -->
-                    <div ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </div>
+                    <div class="narrow-circles" ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </div>
                 </div>
                 <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
             </div>

@@ -5,13 +5,40 @@
 			link: function($scope, $element, $attrs) {
 				$element.on("click", function() {
 					// $element.css("background-color", "black");
-					var circles = document.getElementsByClassName("little-circles")[0];
-					console.log(circles.innerText);
-					if (circles.innerText === "nutty") {
-						console.log("working");
-						circles.css("background-color", "red");
-					} else {
-						console.log("hey");
+					var test = this;
+					var circles = document.getElementsByClassName("little-circles");
+					var narrow = document.getElementsByClassName("narrow-circles");
+					if (test.innerText === "nutty") {
+						console.log(narrow);
+						for (var i= 0; i < narrow.length; i++){
+							narrow[i].style.backgroundColor = "#e22149";
+							narrow[i].style.border = "2px solid #e22149";
+						}
+					} else if (test.innerText === "roasted") {
+						for (var i= 0; i < narrow.length; i++){
+							narrow[i].style.backgroundColor = "#484932";
+							narrow[i].style.border = "2px solid #484932";
+						}
+					} else if (test.innerText === "spicy") {
+						for (var i= 0; i < narrow.length; i++){
+							narrow[i].style.backgroundColor = "#6583bc";
+							narrow[i].style.border = "2px solid #6583bc";
+						}
+					} else if (test.innerText === "floral") {
+						for (var i= 0; i < narrow.length; i++){
+							narrow[i].style.backgroundColor = "#c87029";
+							narrow[i].style.border = "2px solid #c87029";
+						}
+					} else if (test.innerText === "sour") {
+						for (var i= 0; i < narrow.length; i++){
+							narrow[i].style.backgroundColor = "#f8ca34";
+							narrow[i].style.border = "2px solid #f8ca34";
+						}
+					} else if (test.innerText === "sweet") {
+						for (var i= 0; i < narrow.length; i++){
+							narrow[i].style.backgroundColor = "#58549d";
+							narrow[i].style.border = "2px solid #58549d";
+						}
 					}
 				});
 			}
