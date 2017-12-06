@@ -5,13 +5,16 @@
                 <h1 class="page-title">Coffee Title</h1>
             </div>
             <div class="flavor-body">
+                <div id="coffee-bean">
+                    <img src="./images/bean140px.png" alt="bean">
+                </div>
                 <div class="broad"> <!-- broad choices -->
                     <div class="little-circles" ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </div>
                 </div>
                 <div class="narrow"> <!-- narrow choices -->
                     <div ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </div>
                 </div>
-                <p class="back-button" ng-click="$ctrl.goBack();">back</p>
+                <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
             </div>
 `,
         controller: function(FlavorService, $location) {
@@ -20,12 +23,14 @@
             $ctrl.subFlavor = "";
             // pseudo db
 
-            $ctrl.broadArr = [{name: "nutty", flavor: ["chocolate", "toasted marshmallow", "peanut brittle", "raw almond"]},
-                {name: "roasted", flavor: ["milk chocolate", "dark chocolate", "black cherry", "fresh roasted peanut"]},
-                {name: "spicy", flavor: ["graham cracker", "granola", "cloves", "peanut shell"]},
-                {name: "floral", flavor: ["berry tea", "herbal", "blueberry", "tart cherry", "green tea"]},
-                {name: "earthy", flavor: ["clay", "buttered toast"]},
-                {name: "sour", flavor: ["apple skin", "pear", "toffee", "lime zest", "orange pith"]}];
+            $ctrl.broadArr = [
+                {name: "nutty", flavor: ["chocolate", "toasted marshmallow", "peanut brittle", "raw almond", "light caramel", "peanut butter cracker"]},
+                {name: "roasted", flavor: ["milk chocolate", "dark chocolate", "black cherry", "fresh roasted peanut", "woody", "pipe tobacco"]},
+                {name: "spicy", flavor: ["graham cracker", "granola", "cloves", "peanut shell", "nutmeg", "anise"]},
+                {name: "floral", flavor: ["berry tea", "herbal", "blueberry", "tart cherry", "green tea", "ripe strawberry"]},
+                {name: "sour", flavor: ["apple skin", "pear", "toffee", "lime zest", "orange pith", "apple crisp"]},
+                {name: "sweet", flavor: ["cane sugar", "vanilla bean", "sweet cream", "peach", "brown sugar", "milk chocolate"]}
+                ];
 
             $ctrl.getFlavor = function(value) {
                 // assign narrowFlav
