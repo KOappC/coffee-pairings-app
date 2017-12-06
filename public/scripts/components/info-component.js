@@ -8,14 +8,14 @@
         <!-- body -->
         <div class="flavor-body">
             <div id="final-bean">
-                <p> {{ $ctrl.beanChoice }} </p>
+                <p class="your-bean"> {{ $ctrl.beanChoice }} </p>
                 <ul>
                     <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
                 </ul>
             </div>
             <div> <!-- directive that changes display to block or whatever to display on page -->
-                <div id="show-locations" ng-click="$ctrl.getLocations();">locations</div>
-                <div id="show-pairings">pairings</div>
+                <div id="show-locations" ng-click="$ctrl.getLocations();"> <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE</div>
+                <div id="show-pairings"><i id="pair" class="material-icons">place</i>GET FOOD PAIRINGS</div>
             </div>
             <p class="back-button" ng-click="$ctrl.goBack();">back</p>
         <!-- hidden divs -->

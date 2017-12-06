@@ -26,7 +26,7 @@
             $ctrl.broadArr = [
                 {name: "nutty", flavor: ["chocolate", "toasted marshmallow", "peanut brittle", "raw almond", "light caramel", "peanut butter cracker"]},
                 {name: "roasted", flavor: ["milk chocolate", "dark chocolate", "black cherry", "fresh roasted peanut", "woody", "pipe tobacco"]},
-                {name: "spicy", flavor: ["graham cracker", "granola", "cloves", "peanut shell", "nutmeg", "anise"]},
+                {name: "spicy", flavor: ["graham cracker", "granola", "clove", "peanut shell", "nutmeg", "anise"]},
                 {name: "floral", flavor: ["berry tea", "herbal", "blueberry", "tart cherry", "green tea", "ripe strawberry"]},
                 {name: "sour", flavor: ["apple skin", "pear", "toffee", "lime zest", "orange pith", "apple crisp"]},
                 {name: "sweet", flavor: ["cane sugar", "vanilla bean", "sweet cream", "peach", "brown sugar", "milk chocolate"]}
