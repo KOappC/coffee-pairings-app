@@ -9,7 +9,7 @@
                     <img src="./images/bean140px.png" alt="bean">
                 </div>
                 <div class="broad"> <!-- broad choices -->
-                    <div class="little-circles" ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </div>
+                    <div circle-colors class="little-circles" ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </div>
                 </div>
                 <div class="narrow"> <!-- narrow choices -->
                     <div ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </div>

@@ -106,7 +106,7 @@ body {
     height: 80px;
     text-align: center;
     line-height: 80px;
-    display: none;
+/*    display: none;*/
 }
 
 .little-circles:nth-child(1) {
