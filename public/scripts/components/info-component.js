@@ -62,6 +62,43 @@
                 // beanInfo is used...somehow...for this
             };
 
+            $ctrl.locArr = [
+                {name: "decaf brazil", location: ["Roasting Plant", "Anthology Coffee"]},
+                {name: "ethiopia yirgacheffe kochere", location: ["Dessert Oasis Coffee Roasters", "ASHE Supply Co"]},
+                {name: "el salvador santa ana", location: ["Urban Bean Co", "New Order Coffee"]},
+                {name: "burundi aa bumoco society", location: ["Germack Coffee Roasting Co", "Fourteen East"]},
+                {name: "timor hibrido de timor", location: ["Cairo Coffee", "The Bottom Line Coffee House"]},
+                {name: "ethiopia sidamo gerbicho killa", location: ["Fourteen East", "The Bottom Line Coffee House"]},
+                {name: "decaf peru organic", location: ["ASHE Supply Co", "Germack Coffee Roasting Co"]},
+                {name: "brazil mogiana", location: ["Anthology Coffee", "Urban Bean Co"]},
+                {name: "brazil cerrado", location: ["Cairo Coffee", "New Order Coffee"]},
+                {name: "jamaica blue mountain", location: ["Dessert Oasis Coffee Roasters", "Roasting Plant"]}
+
+            ];
+
+            /*
+                Roasting Plant
+
+                Dessert Oasis Coffee Roasters
+
+                ASHE Supply Co
+
+                Urban Bean Co
+
+                Anthology Coffee
+
+                Germack Coffee Roasting Co
+
+                New Order Coffee
+
+                Fourteen East
+
+                The Bottom Line Coffee House
+
+                Cairo Coffee
+            */
+
+
             // back button path
             $ctrl.goBack = function() {
                 $location.path("/flavors");

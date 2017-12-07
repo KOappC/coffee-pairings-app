@@ -53,6 +53,16 @@ body {
     margin: 5% 20% 5% 20%;
 }
 
+#ugly-nav {
+    color: #BEB5A4;
+    text-decoration: none;
+}
+
+#ugly-nav:visited {
+    color: #BEB5A4;
+}
+
+
 
 /* flavors page */
 
@@ -292,9 +302,15 @@ body {
 @media screen and (min-width: 768px) {
 
     .broad {
-        display:flex;
+        display: flex;
         position: static;
+        justify-content: space-between;
     }
+
+    #coffee-bean {
+        display: none;
+    }
+
 
     .little-circles {
         height: 175px;
@@ -308,6 +324,7 @@ body {
         background-color: #e22149;
         border: 2px solid #e22149;
         box-shadow: inset 0 0 0 8px #beb5a4;
+        order: 1;
     }
 
     .little-circles:nth-child(2) {
@@ -315,6 +332,7 @@ body {
         background-color: #484932;
         border: 2px solid #484932;
         box-shadow: inset 0 0 0 8px #beb5a4;
+        order: 1;
     }
 
     .little-circles:nth-child(3) {
@@ -322,6 +340,7 @@ body {
         background-color: #6583bc;
         border: 2px solid #6583bc;
         box-shadow: inset 0 0 0 8px #beb5a4;
+        order: 1;
     }
 
     .little-circles:nth-child(4) {
@@ -329,6 +348,7 @@ body {
         background-color: #c87029;
         border: 2px solid #c87029;
         box-shadow: inset 0 0 0 8px #beb5a4;
+        order: 3;
     }
 
     .little-circles:nth-child(5) {
@@ -336,6 +356,7 @@ body {
         background-color: #f8ca34;
         border: 2px solid #f8ca34;
         box-shadow: inset 0 0 0 8px #beb5a4;
+        order: 3;
     }
 
     .little-circles:nth-child(6) {
@@ -343,6 +364,7 @@ body {
         background-color: #58549d;
         border: 2px solid #58549d;
         box-shadow: inset 0 0 0 8px #beb5a4;
+        order: 3;
     }
 
     #desktop-background {
