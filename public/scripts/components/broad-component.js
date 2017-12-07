@@ -2,10 +2,18 @@
     var broadComponent = {
         template: `
             <div class="menu-bar"> <!-- menu bar -->
-                <h1 class="page-title">Coffee Title</h1>
+                <h1 class="page-title">Flavor Town</h1>
                 <i id="hamburger" class="material-icons">dehaze</i>
             </div>
-            <div class="flavor-body">
+            
+            <div class="hidden-menu">
+                <h3 ng-click="$ctrl.goHome();">Home</h3>
+                <h3 ng-click="$ctrl.goFlavors();">Flavors</h3>
+                <h3 ng-click="$ctrl.goInfo();">Info</h3>
+                <h3 ng-click="$ctrl.goBeans();">Beans</h3>
+            </div>
+            
+            <div class="flavor-body" id="desktop-background">
                 <div id="coffee-bean">
                     <img src="./images/bean140px.png" alt="bean">
                 </div>
@@ -51,7 +59,21 @@
             // back button path
             $ctrl.goBack = function() {
                 $location.path("/home");
-            }
+            };
+
+            // nav functions
+            $ctrl.goHome = function() {
+                $location.path("/home");
+            };
+            $ctrl.goFlavors = function() {
+                $location.path("/flavors");
+            };
+            $ctrl.goInfo = function() {
+                $location.path("/info");
+            };
+            $ctrl.goBeans = function() {
+                $location.path("/beans");
+            };
 
         }
     };
