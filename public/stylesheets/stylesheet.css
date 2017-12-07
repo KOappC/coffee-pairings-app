@@ -365,10 +365,11 @@ body {
 /* broad component, flavors page */
     .broad {
         display: flex;
-        position: static;
+        position: absolute;
         justify-content: center;
+        justify-self: center;
         margin: 0 auto;
-        max-width: 80%;
+/*        max-width: 80%;*/
     }
 
     #coffee-bean {
@@ -377,6 +378,7 @@ body {
 
 
     .little-circles {
+        text-align: center;
         height: 250px;
         width: 300px;
         border-radius: 0;
@@ -433,6 +435,15 @@ body {
 
     #desktop-background {
         background-color: transparent;
+    }
+  
+    .narrow {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      justify-self: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
     }
 
     .narrow-circles {
