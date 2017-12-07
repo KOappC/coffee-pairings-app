@@ -269,7 +269,7 @@ body {
 	background-color: #e22149;
 	border-radius: 15px;
 	height: 55px;
-	width: 90%;
+/*	width: 90%;*/
 	margin: 10px;
 	display: flex;
 	align-items: center;
@@ -383,6 +383,9 @@ body {
         width: 300px;
         border-radius: 0;
         position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .little-circles:nth-child(1) {
