@@ -35,7 +35,7 @@
             <div id="locations">
                 <ul>
                     <h3>Locations:</h3>
-                    <li> Coffee shops near you! </li>
+                    <li ng-repeat="items in $ctrl.finalLoc"> {{ items }} </li>
                 </ul>
             </div>
         </div>
@@ -57,11 +57,14 @@
 
             // locations
             $ctrl.getLocations = function() {
-                console.log("clicking this will show/hide by use of a directive, in the future");
-                // show locations that subFlavor from service is available
-                // beanInfo is used...somehow...for this
-            };
+                for (var i = 0; i < $ctrl.locArr.length; i++) {
+                    if ($ctrl.beanChoice === $ctrl.locArr[i].name) {
+                        $ctrl.finalLoc = $ctrl.locArr[i].location;
+                    }
+                }
 
+            };
+            $ctrl.finalLoc = "";
             $ctrl.locArr = [
                 {name: "decaf brazil", location: ["Roasting Plant", "Anthology Coffee"]},
                 {name: "ethiopia yirgacheffe kochere", location: ["Dessert Oasis Coffee Roasters", "ASHE Supply Co"]},
@@ -75,28 +78,6 @@
                 {name: "jamaica blue mountain", location: ["Dessert Oasis Coffee Roasters", "Roasting Plant"]}
 
             ];
-
-            /*
-                Roasting Plant
-
-                Dessert Oasis Coffee Roasters
-
-                ASHE Supply Co
-
-                Urban Bean Co
-
-                Anthology Coffee
-
-                Germack Coffee Roasting Co
-
-                New Order Coffee
-
-                Fourteen East
-
-                The Bottom Line Coffee House
-
-                Cairo Coffee
-            */
 
 
             // back button path
