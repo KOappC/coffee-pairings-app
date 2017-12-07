@@ -7,7 +7,7 @@
                 // slides menu down when you click the hamburger
                 $element.on("click", function() {
                     var hiddenMenu = document.getElementById("hidden-menu");
-                    hiddenMenu.style.display= "block";
+                    hiddenMenu.style.top= "0";
                 })
             }
         }
