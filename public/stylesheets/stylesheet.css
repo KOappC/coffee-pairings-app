@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,700,800,800i');
+/*@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,700,800,800i');*/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 body {
@@ -8,7 +9,7 @@ body {
 /* welcome page */
 
 .page-title {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     font-style: italic;
     color: #BEB5A4;
@@ -51,7 +52,7 @@ body {
 
 #home-description {
     margin: 5% 20% 5% 20%;
-    font-family: "Nunito", sans-serif;
+   font-family: 'Josefin Sans', sans-serif;
 }
 
 #ugly-nav {
@@ -97,9 +98,10 @@ body {
 }
 
 #back-button {
-    position: absolute;
-    top: 400px;
-    right: 60px;
+    position: fixed;
+    margin: 0 auto;
+    bottom: 10px;
+    right: 10px;
 }
 
 #coffee-bean {
@@ -116,7 +118,7 @@ body {
 }
 
 .little-circles {
-	font-family: "Nunito", sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
 	color: white;
     border-radius: 50%;
@@ -188,7 +190,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: "Nunito", sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
 	color: white;
 }
@@ -255,7 +257,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	color: white;
-	font-family: "Nunito", sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .your-bean {
@@ -286,7 +288,7 @@ body {
 /* NAV */
 
 #hidden-menu{
-    font-family: "Nunito", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     display: flex;
     justify-content: space-around;
@@ -299,6 +301,10 @@ body {
     left: 0;
     z-index: 3;
     transition: 0.5s all;
+}
+
+.hidden-menu-hover:hover{
+  color: deeppink;
 }
 
 #hamburger {

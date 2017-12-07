@@ -7,9 +7,9 @@
             </div>
             
             <div id="hidden-menu">
-                <h3 ng-click="$ctrl.goHome();">Home</h3>
-                <h3 ng-click="$ctrl.goFlavors();">Flavors</h3>
-                <h3 ng-click="$ctrl.goBeans();">Beans</h3>
+                <h3 class="hidden-menu-hover" ng-click="$ctrl.goHome();">Home</h3>
+                <h3 class="hidden-menu-hover" ng-click="$ctrl.goFlavors();">Flavors</h3>
+                <h3 class="hidden-menu-hover" ng-click="$ctrl.goBeans();">Beans</h3>
             </div>
             
             <div class="flavor-body" id="desktop-background">
@@ -22,10 +22,10 @@
                 <div class="narrow"> <!-- narrow choices -->
                     <div class="narrow-circles" ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </div>
                 </div>
-                <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
+                <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">refresh</i>
             </div>
 `,
-        controller: function(FlavorService, $location) {
+        controller: function(FlavorService, $location, $route) {
             var $ctrl = this;
             $ctrl.narrowFlav = [];
             $ctrl.subFlavor = "";
@@ -57,7 +57,7 @@
 
             // back button path
             $ctrl.goBack = function() {
-                $location.path("/home");
+                $route.reload();
             };
 
             // nav functions
