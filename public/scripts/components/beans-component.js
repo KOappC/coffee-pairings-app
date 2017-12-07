@@ -3,10 +3,10 @@
         template: `
             <div class="menu-bar"> <!-- menu bar -->
                 <h1 class="page-title">Coffee Title</h1>
-                <i id="hamburger" class="material-icons">dehaze</i>
+                <i id="hamburger" class="material-icons" menu-directive>dehaze</i>
             </div>
             
-            <div class="hidden-menu">
+            <div id="hidden-menu">
                 <h3 ng-click="$ctrl.goHome();">Home</h3>
                 <h3 ng-click="$ctrl.goFlavors();">Flavors</h3>
                 <h3 ng-click="$ctrl.goInfo();">Info</h3>

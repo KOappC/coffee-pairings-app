@@ -288,6 +288,10 @@ body {
 .hidden-menu {
     position: absolute;
     z-index: 3;
+    display: none;
+}
+#hidden-menu{
+    display: none;
 }
 
 #hamburger {
@@ -296,6 +300,16 @@ body {
   position: relative;
   top: 18px;
   padding-right: 5%;
+}
+
+/* Pairings and location on info page */
+
+#locations {
+    display: none;
+}
+
+#pairings {
+    display: none;
 }
 
 

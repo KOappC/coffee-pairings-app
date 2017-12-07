@@ -3,8 +3,9 @@
 		return {
 			restrict: "A",
 			link: function($scope, $element, $attrs) {
+
+                // change colors of circles based on previous click
 				$element.on("click", function() {
-					// $element.css("background-color", "black");
 					var test = this;
 					var circles = document.getElementsByClassName("little-circles");
 					var narrow = document.getElementsByClassName("narrow-circles");

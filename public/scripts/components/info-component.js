@@ -3,9 +3,9 @@
         template: `
         <div class="menu-bar"> <!-- menu bar -->
                 <h1 class="page-title">Flavor Town</h1>
-                <i id="hamburger" class="material-icons">dehaze</i>
+                <i id="hamburger" class="material-icons" menu-directive>dehaze</i>
         </div>
-        <div class="hidden-menu">
+        <div id="hidden-menu">
             <h3 ng-click="$ctrl.goHome();">Home</h3>
             <h3 ng-click="$ctrl.goFlavors();">Flavors</h3>
             <h3 ng-click="$ctrl.goInfo();">Info</h3>
@@ -21,10 +21,10 @@
                 </ul>
             </div>
             <div> <!-- directive that changes display to block or whatever to display on page -->
-                <div id="show-locations" ng-click="$ctrl.getLocations();"> <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE</div>
-                <div id="show-pairings"><i id="pair" class="material-icons">place</i>GET FOOD PAIRINGS</div>
+                <div id="show-locations" ng-click="$ctrl.getLocations();" location-directive> <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE</div>
+                <div id="show-pairings" pairings-directive><i id="pair" class="material-icons">place</i>GET FOOD PAIRINGS</div>
             </div>
-            <p class="back-button" ng-click="$ctrl.goBack();">back</p>
+            <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
         <!-- hidden divs -->
             <div id="pairings">
                 <ul>
