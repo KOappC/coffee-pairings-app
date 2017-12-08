@@ -14,6 +14,7 @@ body {
     font-style: italic;
     color: #BEB5A4;
     display: inline-block;
+    padding-top: 10px;
 }
 
 #welcome-title {
