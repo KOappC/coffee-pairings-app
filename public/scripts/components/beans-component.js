@@ -7,9 +7,9 @@
             </div>
             
             <div class="hidden-menu" ng-class="{'menu-toggle': $ctrl.activeMenu};">
-                <h3 ng-click="$ctrl.goHome();">Home</h3>
-                <h3 ng-click="$ctrl.goFlavors();">Flavors</h3>
-                <h3 ng-click="$ctrl.goBeans();">Beans</h3>
+                <h3 class="hidden-menu-hover" ng-click="$ctrl.goHome();">Home</h3>
+                <h3 class="hidden-menu-hover" ng-click="$ctrl.goFlavors();">Flavors</h3>
+                <h3 class="hidden-menu-hover" ng-click="$ctrl.goBeans();">Beans</h3>
             </div>
             
             <div class="all-beans"> <!-- ng-repeat the beans from DB -->
