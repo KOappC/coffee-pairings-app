@@ -262,10 +262,17 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
-.flavor-body h3, h4 {
+.flavor-body h4 {
 	margin: 20x;
 	padding: 15px;
 	padding-bottom: 0px;
+}
+
+.flavor-body h3 {
+	margin: 20x;
+	padding: 15px;
+	padding-bottom: 0px;
+	font-size: 22px;
 }
 
 .your-bean {
