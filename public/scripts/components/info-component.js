@@ -23,7 +23,7 @@
             </div>
             <div> <!-- directive that changes display to block or whatever to display on page -->
                 <div class="show-locations" ng-click="$ctrl.getLocations(); $ctrl.toggleLocations();"> <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE</div>
-                <div class="show-pairings" ng-click="$ctrl.togglePairings();"><i id="pair" class="material-icons">place</i>GET FOOD PAIRINGS</div>
+                <div class="show-pairings" ng-click="$ctrl.togglePairings();"><i id="pair" class="material-icons">local_dining</i>GET FOOD PAIRINGS</div>
             </div>
             <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
         <!-- hidden divs -->
