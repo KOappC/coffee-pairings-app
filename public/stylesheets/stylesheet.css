@@ -262,6 +262,12 @@ body {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
+.flavor-body h3, h4 {
+	margin: 20x;
+	padding: 15px;
+	padding-bottom: 0px;
+}
+
 .your-bean {
 	text-transform: uppercase;
 	border-bottom: 4px solid #e22149;

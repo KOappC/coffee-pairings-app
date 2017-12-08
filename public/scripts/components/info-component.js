@@ -14,7 +14,9 @@
         <!-- body -->
         <div class="flavor-body">
             <div id="final-bean">
+				<h3>YOU'RE BEAN IS:</h3>
                 <p class="your-bean"> {{ $ctrl.beanChoice }} </p>
+				<h4>SIMILAR BEANS:</h4>
                 <ul>
                     <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
                 </ul>

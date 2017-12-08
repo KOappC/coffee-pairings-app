@@ -2,7 +2,7 @@
     var beansComponent = {
         template: `
             <div class="menu-bar"> <!-- menu bar -->
-                <h1 class="page-title">Coffee Title</h1>
+                <h1 class="page-title">Flavor Town</h1>
                 <i id="hamburger" class="material-icons" ng-click="$ctrl.toggleMenu();">dehaze</i>
             </div>
             
