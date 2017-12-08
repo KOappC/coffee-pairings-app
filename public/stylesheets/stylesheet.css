@@ -290,18 +290,13 @@ body {
 /* NAV */
 
 .hidden-menu{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
     display: flex;
     justify-content: space-around;
     position: absolute;
-    background-color: #3C2E21;
-    color: #6583bc;
     width: 80%;
     height: 80px;
-    top: -500px;
     left: 0;
-    z-index: 3;
+    top: -500px;
     transition: 0.5s all;
 }
 
@@ -328,7 +323,19 @@ body {
 }
 
 .menu-toggle {
+    background-color: #3C2E21;
+    color: #6583bc;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 85%;
+    height: 80px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    z-index: 3;
+    transition: 0.5s all;
     top: 0;
+    left: 0;
 }
 
 .pairings-toggle {
