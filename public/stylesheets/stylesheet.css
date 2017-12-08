@@ -288,7 +288,7 @@ body {
 
 /* NAV */
 
-#hidden-menu{
+.hidden-menu{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     display: flex;
@@ -318,10 +318,22 @@ body {
 
 /* Pairings and location on info page */
 
-#locations {
+.locations {
     display: none;
 }
 
-#pairings {
+.pairings {
     display: none;
+}
+
+.menu-toggle {
+    top: 0;
+}
+
+.pairings-toggle {
+    display: block;
+}
+
+.location-toggle {
+    display: block;
 }

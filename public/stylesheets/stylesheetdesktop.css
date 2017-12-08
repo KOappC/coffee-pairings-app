@@ -49,16 +49,15 @@
         margin: 0 auto;
         margin-left: 5%;
         margin-right: 5%;
-        max-width: 80%;
+/*        max-width: 80%;*/
     }
 
     #coffee-bean {
         display: none;
-
+}
 
     .little-circles {
         text-align: center;
-    }
         height: 175px;
         width: 420px;
         border-radius: 0;
