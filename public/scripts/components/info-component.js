@@ -76,7 +76,8 @@
                 {name: "decaf peru organic", location: ["ASHE Supply Co", "Germack Coffee Roasting Co"]},
                 {name: "brazil mogiana", location: ["Anthology Coffee", "Urban Bean Co"]},
                 {name: "brazil cerrado", location: ["Cairo Coffee", "New Order Coffee"]},
-                {name: "jamaica blue mountain", location: ["Dessert Oasis Coffee Roasters", "Roasting Plant"]}
+                {name: "jamaica blue mountain", location: ["Dessert Oasis Coffee Roasters", "Roasting Plant"]},
+                {name: "guatemala atitlan san pedro", location: ["New Order Coffee", "Dessert Oasis Coffee Roasters"]}
 
             ];
 
