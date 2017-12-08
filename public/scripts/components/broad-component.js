@@ -3,10 +3,10 @@
         template: `
             <div class="menu-bar"> <!-- menu bar -->
                 <h1 class="page-title">Flavor Town</h1>
-                <i id="hamburger" class="material-icons" menu-directive>dehaze</i>
+                <i id="hamburger" class="material-icons" ng-click="$ctrl.toggleMenu();">dehaze</i>
             </div>
             
-            <div id="hidden-menu">
+            <div class="hidden-menu" ng-class="{'menu-toggle': $ctrl.activeMenu};">
                 <h3 class="hidden-menu-hover" ng-click="$ctrl.goHome();">Home</h3>
                 <h3 class="hidden-menu-hover" ng-click="$ctrl.goFlavors();">Flavors</h3>
                 <h3 class="hidden-menu-hover" ng-click="$ctrl.goBeans();">Beans</h3>
@@ -58,6 +58,12 @@
             // back button path
             $ctrl.goBack = function() {
                 $route.reload();
+            };
+
+            // show hide menu
+            $ctrl.activeMenu = false;
+            $ctrl.toggleMenu = function() {
+                $ctrl.activeMenu = !$ctrl.activeMenu;
             };
 
             // nav functions

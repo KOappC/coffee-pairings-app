@@ -20,18 +20,18 @@
                 </ul>
             </div>
             <div> <!-- directive that changes display to block or whatever to display on page -->
-                <div id="show-locations" ng-click="$ctrl.getLocations();" location-directive> <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE</div>
-                <div id="show-pairings" pairings-directive><i id="pair" class="material-icons">place</i>GET FOOD PAIRINGS</div>
+                <div class="show-locations" ng-click="$ctrl.getLocations(); $ctrl.toggleLocations();"> <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE</div>
+                <div class="show-pairings" ng-click="$ctrl.togglePairings();"><i id="pair" class="material-icons">place</i>GET FOOD PAIRINGS</div>
             </div>
             <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
         <!-- hidden divs -->
-            <div id="pairings">
+            <div class="pairings" ng-class="{'pairings-toggle': $ctrl.activePairings}">
                 <ul>
                     <h3>Pairings:</h3>
                     <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li>
                 </ul>
             </div>
-            <div id="locations">
+            <div class="locations" ng-class="{'locations-toggle': $ctrl.activeLocations}">
                 <ul>
                     <h3>Locations:</h3>
                     <li ng-repeat="items in $ctrl.finalLoc"> {{ items }} </li>
@@ -82,7 +82,18 @@
             $ctrl.activeMenu = false;
             $ctrl.toggleMenu = function() {
                 $ctrl.activeMenu = !$ctrl.activeMenu;
-                console.log($ctrl.activeMenu);
+            };
+
+            // show hide pairings
+            $ctrl.activePairings = false;
+            $ctrl.togglePairings = function() {
+                $ctrl.activePairings = !$ctrl.activePairings;
+            };
+
+            // show hide locations
+            $ctrl.activeLocations = false;
+            $ctrl.toggleLocations = function() {
+                $ctrl.activeLocations = !$ctrl.activeLocations;
             };
 
             // back button path

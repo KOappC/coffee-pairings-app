@@ -269,7 +269,7 @@ body {
 	margin: 20px;
 }
 
-#show-locations, #show-pairings {
+.show-locations, .show-pairings {
 	background-color: #e22149;
 	border-radius: 15px;
 	height: 55px;
@@ -338,10 +338,6 @@ body {
     left: 0;
 }
 
-.pairings-toggle {
-    display: block;
-}
-
-.location-toggle {
+.pairings-toggle, .locations-toggle {
     display: block;
 }
