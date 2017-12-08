@@ -6,9 +6,9 @@
                 <i id="hamburger" class="material-icons" menu-directive>dehaze</i>
         </div>
         <div id="hidden-menu">
-            <h3 ng-click="$ctrl.goHome();">Home</h3>
-            <h3 ng-click="$ctrl.goFlavors();">Flavors</h3>
-            <h3 ng-click="$ctrl.goBeans();">Beans</h3>
+            <h3 class="hidden-menu-hover" ng-click="$ctrl.goHome();">Home</h3>
+            <h3 class="hidden-menu-hover" ng-click="$ctrl.goFlavors();">Flavors</h3>
+            <h3 class="hidden-menu-hover" ng-click="$ctrl.goBeans();">Beans</h3>
         </div>
         
         <!-- body -->
