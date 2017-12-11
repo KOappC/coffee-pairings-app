@@ -32,33 +32,33 @@
             <div>
                 <div class="show-sim-beans" ng-click="$ctrl.toggleSimBeans();">
                     <i id="sim" class="material-icons">local_cafe</i>GET SIMILAR BEANS
+			        <div class="sim-beans" ng-class="{'sim-beans-toggle': $ctrl.activeSimBeans}">
+			            <h4>SIMILAR BEANS:</h4>
+                        <ul>
+                            <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="show-pairings" ng-click="$ctrl.togglePairings();">
                     <i id="pair" class="material-icons">local_dining</i>GET FOOD PAIRINGS
+                    <div class="pairings" ng-class="{'pairings-toggle': $ctrl.activePairings}">
+                        <h4>PAIRINGS:</h4>
+                        <ul>
+                            <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="show-locations" ng-click="$ctrl.getLocations(); $ctrl.toggleLocations();">
                     <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE
+                    <div class="locations" ng-class="{'locations-toggle': $ctrl.activeLocations}">
+                        <h4>LOCATIONS:</h4>
+                        <ul>
+                            <li ng-repeat="items in $ctrl.finalLoc"> {{ items }} </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
-			<div class="sim-beans" ng-class="{'sim-beans-toggle': $ctrl.activeSimBeans}">
-			    <h4>SIMILAR BEANS:</h4>
-                <ul>
-                    <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
-                </ul>
-            </div>
-            <div class="pairings" ng-class="{'pairings-toggle': $ctrl.activePairings}">
-                <h4>PAIRINGS:</h4>
-                <ul>
-                    <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li>
-                </ul>
-            </div>
-            <div class="locations" ng-class="{'locations-toggle': $ctrl.activeLocations}">
-                <h4>LOCATIONS:</h4>
-                <ul>
-                    <li ng-repeat="items in $ctrl.finalLoc"> {{ items }} </li>
-                </ul>
-            </div>
         </div>
         
         `,

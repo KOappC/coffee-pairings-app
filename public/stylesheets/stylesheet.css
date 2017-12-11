@@ -353,5 +353,6 @@ body {
 }
 
 .pairings-toggle, .locations-toggle, .sim-beans-toggle {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
