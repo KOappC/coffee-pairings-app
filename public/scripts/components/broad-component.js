@@ -1,7 +1,7 @@
 (function() {
     var broadComponent = {
         template: `
-            <div class="menu-bar"> <!-- menu bar -->
+            <div class="menu-bar">
                 <h1 class="page-title">Flavor Town</h1>
                 <i id="hamburger" class="material-icons" ng-click="$ctrl.toggleMenu();">dehaze</i>
             </div>
@@ -16,10 +16,10 @@
                 <div id="coffee-bean">
                     <img src="./images/bean140px.png" alt="bean">
                 </div>
-                <div class="broad"> <!-- broad choices -->
+                <div class="broad">
                     <div circle-colors class="little-circles" ng-repeat="items in $ctrl.broadArr" href="" ng-click="$ctrl.getFlavor(items);"> {{ items.name }} </div>
                 </div>
-                <div class="narrow"> <!-- narrow choices -->
+                <div class="narrow">
                     <div class="narrow-circles" ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </div>
                 </div>
                 <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">refresh</i>
@@ -29,7 +29,6 @@
             var $ctrl = this;
             $ctrl.narrowFlav = [];
             $ctrl.subFlavor = "";
-            // pseudo db
 
             $ctrl.broadArr = [
                 {name: "nutty", flavor: ["chocolate", "toasted marshmallow", "peanut brittle", "raw almond", "light caramel", "peanut butter cracker"]},
@@ -41,32 +40,24 @@
                 ];
 
             $ctrl.getFlavor = function(value) {
-                // assign narrowFlav
                 $ctrl.narrowFlav = value.flavor;
                 FlavorService.setSimBean(value.name);
             };
 
             $ctrl.getSubFlavor = function(value) {
-                // pull in narrowFlav and assign bean
                 $ctrl.subFlavor = value;
-                // passing sub flavor to service
                 FlavorService.setBean(value);
             };
 
-            //function here to send subflavor to service to info
-
-            // back button path
             $ctrl.goBack = function() {
                 $route.reload();
             };
 
-            // show hide menu
             $ctrl.activeMenu = false;
             $ctrl.toggleMenu = function() {
                 $ctrl.activeMenu = !$ctrl.activeMenu;
             };
 
-            // nav functions
             $ctrl.goHome = function() {
                 $location.path("/home");
             };

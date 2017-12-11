@@ -8,7 +8,7 @@
                 </div>
                 <p id="home-description">Click on the bean to find your perfect coffee, based on flavors that you choose.  Drinking coffee will never be the same.  Welcome to Flavor Town!</p>
             </div>
-            <div id="dark-background"></div> <!-- dark background on home page -->
+            <div id="dark-background"></div>
             `,
         controller: function($location) {
             var $ctrl = this;

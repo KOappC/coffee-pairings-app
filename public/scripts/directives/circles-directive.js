@@ -4,7 +4,6 @@
 			restrict: "A",
 			link: function($scope, $element, $attrs) {
 
-                // change colors of circles based on previous click
 				$element.on("click", function() {
 					var test = this;
 					var circles = document.getElementsByClassName("little-circles");

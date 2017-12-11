@@ -1,7 +1,7 @@
 (function() {
     var infoComponent = {
         template: `
-        <div class="menu-bar"> <!-- menu bar -->
+        <div class="menu-bar">
                 <h1 class="page-title">Flavor Town</h1>
                 <i id="hamburger" class="material-icons" ng-click="$ctrl.toggleMenu();">dehaze</i>
         </div>
@@ -11,7 +11,6 @@
             <h3 class="hidden-menu-hover" ng-click="$ctrl.goBeans();">Beans</h3>
         </div>
         
-        <!-- body -->
         <div class="flavor-body">
             <div id="final-bean">
 				<h3>YOUR BEAN IS:</h3>
@@ -21,12 +20,11 @@
                     <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
                 </ul>
             </div>
-            <div> <!-- directive that changes display to block or whatever to display on page -->
+            <div>
                 <div class="show-locations" ng-click="$ctrl.getLocations(); $ctrl.toggleLocations();"> <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE</div>
                 <div class="show-pairings" ng-click="$ctrl.togglePairings();"><i id="pair" class="material-icons">local_dining</i>GET FOOD PAIRINGS</div>
             </div>
             <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
-        <!-- hidden divs -->
             <div class="pairings" ng-class="{'pairings-toggle': $ctrl.activePairings}">
                 <ul>
                     <h3>Pairings:</h3>
@@ -46,17 +44,9 @@
             var $ctrl = this;
 
             $ctrl.beanChoice = FlavorService.passBean();
-
-            // pull in and return bean selection
             $ctrl.beanInfo = FlavorService.getBean();
-
-            // similar beans
             $ctrl.simBean = FlavorService.getSimBean();
-
-            // pairings
             $ctrl.getPairings = FlavorService.getPairings();
-
-            // locations
             $ctrl.getLocations = function() {
                 for (var i = 0; i < $ctrl.locArr.length; i++) {
                     if ($ctrl.beanChoice === $ctrl.locArr[i].name) {
@@ -81,30 +71,25 @@
 
             ];
 
-            // show hide menu
             $ctrl.activeMenu = false;
             $ctrl.toggleMenu = function() {
                 $ctrl.activeMenu = !$ctrl.activeMenu;
             };
 
-            // show hide pairings
             $ctrl.activePairings = false;
             $ctrl.togglePairings = function() {
                 $ctrl.activePairings = !$ctrl.activePairings;
             };
 
-            // show hide locations
             $ctrl.activeLocations = false;
             $ctrl.toggleLocations = function() {
                 $ctrl.activeLocations = !$ctrl.activeLocations;
             };
 
-            // back button path
             $ctrl.goBack = function() {
                 $location.path("/flavors");
             };
 
-            // nav functions
             $ctrl.goHome = function() {
                 $location.path("/home");
             };

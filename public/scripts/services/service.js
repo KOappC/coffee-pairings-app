@@ -10,52 +10,36 @@
         var finalPairings = [];
 
         return {
-            // holds the bean choice
             getBean: getBean,
             setBean: setBean,
             passBean: passBean,
-            // similar beans
             getSimBean: getSimBean,
             setSimBean: setSimBean,
-            // get pairings (maybe needed)
-            getPairings: getPairings,
-            // locations (maybe needed)
+            getPairings: getPairings
         };
-        // bean choice
         function getBean() {
             return subFlavor;
         }
 
-        // pass single bean to info-component
         function passBean() {
             return beanPass;
         }
 
-        // pass array of similar beans
         function passBeanArray() {
             return beanArray;
         }
 
         function setBean(info) {
-            // setting subFlavor to value of sub flavor clicked
             subFlavor = info;
-            // subFlavor = info.name (name of the subFlavor) info.bean (name of bean for use in other functions)
-            // goes to info page
             return $http({
                 method: "GET",
                 url: "/beans/" + subFlavor
             }).then(function(response) {
-
-                // assign beanPass/the bean chosen
                 beanPass = response.data[0].bean;
-
-                // pushing the similar beans to the finalSimBeanArray
                 beanArray = response.data.forEach(function(info) {
                     finalSimBeanArray.push(info.bean);
-                    //return info.bean;
                 });
 
-                // pairings
                 pairings = response.data.forEach(function(info) {
                     finalPairings.push(info.pairing1, info.pairing2);
                 });
@@ -71,7 +55,6 @@
 
         }
 
-        // similar beans
         function getSimBean() {
             return finalSimBeanArray;
         }
@@ -90,23 +73,9 @@
             });
         }
 
-        // pairings
         function getPairings() {
             return finalPairings;
         }
-
-        // locations
-
-        // primary flavors
-        /*
-            http request that gets DISTINCT value of broad
-            THEN passes them to broad-component
-        */
-        // secondary flavors
-        /*
-            http request that gets DISTINCT value of narrow1 and narrow2
-            THEN passes them to broad-component as broadArr.flavor
-        */
 
 
     }
