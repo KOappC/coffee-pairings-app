@@ -267,13 +267,13 @@ body {
 }
 
 .flavor-body h4 {
-	margin: 20x;
+	margin: 20px;
 	padding: 15px;
 	padding-bottom: 0px;
 }
 
 .flavor-body h3 {
-	margin: 20x;
+	margin: 20px;
 	padding: 15px;
 	padding-bottom: 0px;
 	font-size: 22px;
@@ -286,7 +286,7 @@ body {
 	margin: 20px;
 }
 
-.show-locations, .show-pairings {
+.show-locations, .show-pairings, .show-sim-beans {
 	background-color: #e22149;
 	border-radius: 15px;
 	height: 55px;
@@ -296,7 +296,7 @@ body {
     cursor: pointer;
 }
 
-#locate, #pair {
+#locate, #pair, #sim {
 	font-size: 40px;
 	color: #6583bc;
 	padding-left: 8px;
@@ -331,11 +331,7 @@ body {
 
 /* Pairings and location on info page */
 
-.locations {
-    display: none;
-}
-
-.pairings {
+.locations, .pairings, .sim-beans {
     display: none;
 }
 
@@ -356,6 +352,6 @@ body {
     cursor: pointer;
 }
 
-.pairings-toggle, .locations-toggle {
+.pairings-toggle, .locations-toggle, .sim-beans-toggle {
     display: block;
 }

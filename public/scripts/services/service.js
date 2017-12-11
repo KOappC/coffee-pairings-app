@@ -9,7 +9,13 @@
         var pairings = [];
         var finalPairings = [];
         var beanLibrary = [];
-        var librayChoice = "";
+        var beanAltitude = "";
+        var beanRegion = "";
+        var beanRoast = "";
+        var beanBody = "";
+        var beanAcidity = "";
+        var beanFeel = "";
+        var beanMethod = "";
 
         return {
             getBean: getBean,
@@ -19,9 +25,35 @@
             setSimBean: setSimBean,
             getPairings: getPairings,
             setLibrary: setLibrary,
-            getLibrary: getLibrary
+            getLibrary: getLibrary,
+            getAltitude: getAltitude,
+            getRegion: getRegion,
+            getRoast: getRoast,
+            getBody: getBody,
+            getAcidity: getAcidity,
+            getFeel: getFeel,
+            getMethod: getMethod
         };
 
+        function getRoast() {
+            return beanRoast;
+        }
+
+        function getBody() {
+            return beanBody;
+        }
+
+        function getAcidity() {
+            return beanAcidity;
+        }
+
+        function getFeel() {
+            return beanFeel;
+        }
+
+        function getMethod() {
+            return beanMethod;
+        }
 
         function getBean() {
             return subFlavor;
@@ -47,6 +79,13 @@
             return beanLibrary;
         }
 
+        function getAltitude() {
+            return beanAltitude;
+        }
+        function getRegion() {
+            return beanRegion;
+        }
+
         function setBean(info) {
             subFlavor = info;
             return $http({
@@ -55,6 +94,14 @@
             }).then(function(response) {
                 
                 beanPass = response.data[0].bean;
+                beanAltitude = response.data[0].altitude;
+                beanRegion = response.data[0].region;
+                beanRoast = response.data[0].roast;
+                beanBody = response.data[0].body;
+                beanAcidity = response.data[0].acidity;
+                beanFeel = response.data[0].feel;
+                beanMethod = response.data[0].method1;
+
                 finalPairings = [];
                 finalPairings.push(response.data[0].pairing1, response.data[0].pairing2);
                

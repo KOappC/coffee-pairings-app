@@ -35,6 +35,7 @@ routes.get("/beans/:flavor", function(req, res) {
     var values = [flavor.flavor];
     pool.query(sql, values).then(function(result) {
         res.send(result.rows);
+        console.log(result.rows);
     });
 });
 

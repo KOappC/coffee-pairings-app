@@ -15,25 +15,47 @@
             <div id="final-bean">
 				<h3>YOUR BEAN IS:</h3>
                 <p class="your-bean"> {{ $ctrl.beanChoice }} </p>
-				<h4>SIMILAR BEANS:</h4>
+                <div class="extra-details">
+                    <h4>DETAILS:</h4>
+                    <ul>
+                        <li>Region: {{ $ctrl.beanRegion }} </li>
+                        <li>Altitude: {{ $ctrl.beanAltitude }} </li>
+                        <li>Processing Method: {{ $ctrl.beanMethod }}</li>
+                        <li>Roast Level: {{ $ctrl.beanRoast }}</li>
+                        <li>Body: {{ $ctrl.beanBody }}</li>
+                        <li>Acidity: {{ $ctrl.beanAcidity }}</li>
+                        <li>Mouth Feel: {{ $ctrl.beanFeel }}</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div>
+                <div class="show-sim-beans" ng-click="$ctrl.toggleSimBeans();">
+                    <i id="sim" class="material-icons">local_cafe</i>GET SIMILAR BEANS
+                </div>
+                <div class="show-pairings" ng-click="$ctrl.togglePairings();">
+                    <i id="pair" class="material-icons">local_dining</i>GET FOOD PAIRINGS
+                </div>
+                <div class="show-locations" ng-click="$ctrl.getLocations(); $ctrl.toggleLocations();">
+                    <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE
+                </div>
+            </div>
+            <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
+			<div class="sim-beans" ng-class="{'sim-beans-toggle': $ctrl.activeSimBeans}">
+			    <h4>SIMILAR BEANS:</h4>
                 <ul>
                     <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
                 </ul>
             </div>
-            <div>
-                <div class="show-locations" ng-click="$ctrl.getLocations(); $ctrl.toggleLocations();"> <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE</div>
-                <div class="show-pairings" ng-click="$ctrl.togglePairings();"><i id="pair" class="material-icons">local_dining</i>GET FOOD PAIRINGS</div>
-            </div>
-            <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
             <div class="pairings" ng-class="{'pairings-toggle': $ctrl.activePairings}">
+                <h4>PAIRINGS:</h4>
                 <ul>
-                    <h3>Pairings:</h3>
                     <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li>
                 </ul>
             </div>
             <div class="locations" ng-class="{'locations-toggle': $ctrl.activeLocations}">
+                <h4>LOCATIONS:</h4>
                 <ul>
-                    <h3>Locations:</h3>
                     <li ng-repeat="items in $ctrl.finalLoc"> {{ items }} </li>
                 </ul>
             </div>
@@ -45,6 +67,14 @@
 
             $ctrl.beanChoice = FlavorService.passBean();
             $ctrl.beanInfo = FlavorService.getBean();
+            $ctrl.beanAltitude = FlavorService.getAltitude();
+            $ctrl.beanRegion = FlavorService.getRegion();
+            $ctrl.beanRoast = FlavorService.getRoast();
+            $ctrl.beanBody = FlavorService.getBody();
+            $ctrl.beanAcidity = FlavorService.getAcidity();
+            $ctrl.beanFeel = FlavorService.getFeel();
+            $ctrl.beanMethod = FlavorService.getMethod();
+
             $ctrl.simBean = FlavorService.getSimBean();
             $ctrl.getPairings = FlavorService.getPairings();
             $ctrl.getLocations = function() {
@@ -74,6 +104,11 @@
             $ctrl.activeMenu = false;
             $ctrl.toggleMenu = function() {
                 $ctrl.activeMenu = !$ctrl.activeMenu;
+            };
+
+            $ctrl.activeSimBeans = false;
+            $ctrl.toggleSimBeans = function() {
+                $ctrl.activeSimBeans = !$ctrl.activeSimBeans;
             };
 
             $ctrl.activePairings = false;
