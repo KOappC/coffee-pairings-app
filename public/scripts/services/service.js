@@ -35,13 +35,34 @@
                 method: "GET",
                 url: "/beans/" + subFlavor
             }).then(function(response) {
+                
                 beanPass = response.data[0].bean;
-              
+                finalPairings = [];
                 finalPairings.push(response.data[0].pairing1, response.data[0].pairing2);
                
+              
+  // this only sort of works......            
                 beanArray = response.data.forEach(function(info) {
+//                    console.log(finalSimBeanArray);
+//                    finalSimBeanArray.push(info.bean);
+//                    console.log(finalSimBeanArray);
+                  
+                  if (info.bean !== beanPass) {
+                    console.log("yo");
                     finalSimBeanArray.push(info.bean);
+                  }
+                  console.log(finalSimBeanArray);
+                  
+//                  else {
+//                    finalSimBeanArray = ["no similar beans found"];
+//                  }
+//                  
+//                    if (info.bean === beanPass) {
+//                      finalSimBeanArray = ["no similar beans found"];
+//                    } else {}
+  
                 });
+
 
 
 
