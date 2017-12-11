@@ -26,7 +26,6 @@ routes.get("/flavors", function(req, res) {
     pool.query("select DISTINCT bean from tasting").then(function(result) {
         res.send(result.rows);
         var beans = [result.rows];
-        console.log(beans);
     });
 });
 
@@ -35,7 +34,6 @@ routes.get("/beans/:flavor", function(req, res) {
     var sql = "select * from tasting where narrow1=$1 or narrow2=$1;";
     var values = [flavor.flavor];
     pool.query(sql, values).then(function(result) {
-        console.log(result.rows);
         res.send(result.rows);
     });
 });

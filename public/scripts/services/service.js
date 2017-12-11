@@ -41,14 +41,11 @@
                 url: "/flavors"
             }).then(function(response) {
                 beanLibrary = response.data;
-                console.log(beanLibrary);
             })
         }
         function getLibrary() {
             return beanLibrary;
         }
-
-        
 
         function setBean(info) {
             subFlavor = info;
@@ -69,10 +66,8 @@
 //                    console.log(finalSimBeanArray);
                   
                   if (info.bean !== beanPass) {
-                    console.log("yo");
                     finalSimBeanArray.push(info.bean);
                   }
-                  console.log(finalSimBeanArray);
                   
 //                  else {
 //                    finalSimBeanArray = ["no similar beans found"];
