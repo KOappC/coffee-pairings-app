@@ -8,6 +8,8 @@
         var beanPass = "";
         var pairings = [];
         var finalPairings = [];
+        var beanLibrary = [];
+        var librayChoice = "";
 
         return {
             getBean: getBean,
@@ -15,8 +17,12 @@
             passBean: passBean,
             getSimBean: getSimBean,
             setSimBean: setSimBean,
-            getPairings: getPairings
+            getPairings: getPairings,
+            setLibrary: setLibrary,
+            getLibrary: getLibrary
         };
+
+
         function getBean() {
             return subFlavor;
         }
@@ -28,6 +34,21 @@
         function passBeanArray() {
             return beanArray;
         }
+
+        function setLibrary() {
+            return $http({
+                method: "GET",
+                url: "/flavors"
+            }).then(function(response) {
+                beanLibrary = response.data;
+                console.log(beanLibrary);
+            })
+        }
+        function getLibrary() {
+            return beanLibrary;
+        }
+
+        
 
         function setBean(info) {
             subFlavor = info;

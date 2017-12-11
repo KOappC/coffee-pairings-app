@@ -13,10 +13,10 @@
             </div>
             
             <div class="all-beans">
-                <p>all the coffees from the database</p>
+                <div class="bean-details" ng-repeat="items in $ctrl.pullLibrary"> {{ items.bean }} </div>
             </div>
 `,
-        controller: function($location) {
+        controller: function($location, FlavorService) {
             var $ctrl = this;
             $ctrl.activeMenu = false;
             $ctrl.toggleMenu = function() {
@@ -32,6 +32,11 @@
             $ctrl.goBeans = function() {
                 $location.path("/beans");
             };
+
+            FlavorService.setLibrary().then(function(){
+                $ctrl.pullLibrary = FlavorService.getLibrary();
+            })
+
         }
     };
 
