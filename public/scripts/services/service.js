@@ -36,20 +36,20 @@
                 url: "/beans/" + subFlavor
             }).then(function(response) {
                 beanPass = response.data[0].bean;
+              
+                finalPairings.push(response.data[0].pairing1, response.data[0].pairing2);
+               
                 beanArray = response.data.forEach(function(info) {
                     finalSimBeanArray.push(info.bean);
                 });
 
-                pairings = response.data.forEach(function(info) {
-                    finalPairings.push(info.pairing1, info.pairing2);
-                });
+
 
                 $location.path("/info");
                 return {
                     response,
                     beanPass,
-                    beanArray,
-                    pairings
+                    beanArray
                 };
             });
 
