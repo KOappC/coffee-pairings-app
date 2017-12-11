@@ -16,6 +16,8 @@
         var beanAcidity = "";
         var beanFeel = "";
         var beanMethod = "";
+        var browseBean = "";
+        var browseChoice = {};
 
         return {
             getBean: getBean,
@@ -32,7 +34,9 @@
             getBody: getBody,
             getAcidity: getAcidity,
             getFeel: getFeel,
-            getMethod: getMethod
+            getMethod: getMethod,
+            setBrowseBean: setBrowseBean,
+            getBrowseBean: getBrowseBean
         };
 
         function getRoast() {
@@ -84,6 +88,25 @@
         }
         function getRegion() {
             return beanRegion;
+        }
+
+        function setBrowseBean(info) {
+            browseBean = info;
+            return $http({
+                method: "GET",
+                url: "/browse/" + browseBean
+            }).then(function(response) {
+                console.log(response);
+                browseChoice = response.data[2];
+                console.log(browseChoice);
+            })
+        }
+
+        function getBrowseBean() {
+            return {
+                browseBean,
+                browseChoice
+            };
         }
 
         function setBean(info) {
@@ -143,8 +166,7 @@
             return finalSimBeanArray;
         }
 
-        function setSimBean(info) {
-            simBean = info;
+        function setSimBean() {
             return $http({
                 method: "GET",
                 url: "/beans/" + subFlavor

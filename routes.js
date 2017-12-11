@@ -39,6 +39,16 @@ routes.get("/beans/:flavor", function(req, res) {
     });
 });
 
+routes.get("/browse/:flavor", function(req, res) {
+    var flavor = req.params;
+    var sql = "select * from tasting where bean=$1;";
+    var values = [flavor.flavor];
+    pool.query(sql, values).then(function(result) {
+        res.send(result.rows);
+        console.log(result.rows);
+    });
+});
+
 
 
 module.exports = routes;

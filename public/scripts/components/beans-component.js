@@ -13,7 +13,7 @@
             </div>
             
             <div class="all-beans">
-                <div class="bean-details" ng-repeat="items in $ctrl.pullLibrary"> {{ items.bean }} </div>
+                <div class="bean-details" ng-repeat="items in $ctrl.pullLibrary" ng-click="$ctrl.getBrowseBean(items.bean);"> {{ items.bean }} </div>
             </div>
 `,
         controller: function($location, FlavorService) {
@@ -33,9 +33,20 @@
                 $location.path("/beans");
             };
 
-            FlavorService.setLibrary().then(function(){
+            FlavorService.setLibrary().then(function() {
                 $ctrl.pullLibrary = FlavorService.getLibrary();
-            })
+            });
+
+            $ctrl.beanChoice = "";
+            $ctrl.getBrowseBean = function(info) {
+                beanChoice = info;
+                console.log(info);
+                FlavorService.setBrowseBean(info).then(function() {
+                    $location.path("/info");
+                });
+
+            };
+
 
         }
     };

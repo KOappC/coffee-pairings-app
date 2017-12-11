@@ -14,17 +14,17 @@
         <div class="flavor-body">
             <div id="final-bean">
 				<h3>YOUR BEAN IS:</h3>
-                <p class="your-bean"> {{ $ctrl.beanChoice }} </p>
+                <p class="your-bean"> {{ $ctrl.beanChoice || $ctrl.beanFromBrowse.browseBean }}</p>
                 <div class="extra-details">
                     <h4>DETAILS:</h4>
-                    <ul>
-                        <li>Region: {{ $ctrl.beanRegion }} </li>
-                        <li>Altitude: {{ $ctrl.beanAltitude }} </li>
-                        <li>Processing Method: {{ $ctrl.beanMethod }}</li>
-                        <li>Roast Level: {{ $ctrl.beanRoast }}</li>
-                        <li>Body: {{ $ctrl.beanBody }}</li>
-                        <li>Acidity: {{ $ctrl.beanAcidity }}</li>
-                        <li>Mouth Feel: {{ $ctrl.beanFeel }}</li>
+                    <ul> {{  }}
+                        <li>Region: {{ $ctrl.beanRegion || $ctrl.beanFromBrowse.browseChoice.region }}</li>
+                        <li>Altitude: {{ $ctrl.beanAltitude || $ctrl.beanFromBrowse.browseChoice.altitude }}</li>
+                        <li>Processing Method: {{ $ctrl.beanMethod || $ctrl.beanFromBrowse.browseChoice.method1 }}</li>
+                        <li>Roast Level: {{ $ctrl.beanRoast || $ctrl.beanFromBrowse.browseChoice.roast }}</li>
+                        <li>Body: {{ $ctrl.beanBody || $ctrl.beanFromBrowse.browseChoice.body }}</li>
+                        <li>Acidity: {{ $ctrl.beanAcidity || $ctrl.beanFromBrowse.browseChoice.acidity }}</li>
+                        <li>Mouth Feel: {{ $ctrl.beanFeel || $ctrl.beanFromBrowse.browseChoice.feel }}</li>
                     </ul>
                 </div>
                 
@@ -45,6 +45,8 @@
                         <h4>PAIRINGS:</h4>
                         <ul>
                             <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li>
+                            <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing1 }} </li>
+                            <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing2 }} </li>
                         </ul>
                     </div>
                 </div>
@@ -74,6 +76,8 @@
             $ctrl.beanAcidity = FlavorService.getAcidity();
             $ctrl.beanFeel = FlavorService.getFeel();
             $ctrl.beanMethod = FlavorService.getMethod();
+            $ctrl.beanFromBrowse = FlavorService.getBrowseBean();
+
 
             $ctrl.simBean = FlavorService.getSimBean();
             $ctrl.getPairings = FlavorService.getPairings();
