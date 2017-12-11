@@ -96,9 +96,7 @@
                 method: "GET",
                 url: "/browse/" + browseBean
             }).then(function(response) {
-                console.log(response);
                 browseChoice = response.data[2];
-                console.log(browseChoice);
             })
         }
 

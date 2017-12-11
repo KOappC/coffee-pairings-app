@@ -9,7 +9,7 @@
 					var circles = document.getElementsByClassName("little-circles");
 					var narrow = document.getElementsByClassName("narrow-circles");
 					if (test.innerText === "nutty") {
-						console.log(narrow);
+
 						for (var i= 0; i < narrow.length; i++){
 							narrow[i].style.backgroundColor = "#e22149";
 							narrow[i].style.border = "2px solid #e22149";

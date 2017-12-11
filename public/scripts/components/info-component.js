@@ -31,7 +31,8 @@
             </div>
             <div>
                 <div class="show-sim-beans" ng-click="$ctrl.toggleSimBeans();">
-                    <i id="sim" class="material-icons">local_cafe</i>GET SIMILAR BEANS
+                    <i id="sim" class="material-icons">local_cafe</i>
+                    <p>GET SIMILAR BEANS</p>
 			        <div class="sim-beans" ng-class="{'sim-beans-toggle': $ctrl.activeSimBeans}">
 			            <h4>SIMILAR BEANS:</h4>
                         <ul>
@@ -40,18 +41,20 @@
                     </div>
                 </div>
                 <div class="show-pairings" ng-click="$ctrl.togglePairings();">
-                    <i id="pair" class="material-icons">local_dining</i>GET FOOD PAIRINGS
+                    <i id="pair" class="material-icons">local_dining</i>
+                    <p>GET FOOD PAIRINGS</p>
                     <div class="pairings" ng-class="{'pairings-toggle': $ctrl.activePairings}">
                         <h4>PAIRINGS:</h4>
                         <ul>
                             <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li>
-                            <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing1 }} </li>
-                            <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing2 }} </li>
+                    <!--    <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing1 }} </li>
+                            <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing2 }} </li>     -->
                         </ul>
                     </div>
                 </div>
                 <div class="show-locations" ng-click="$ctrl.getLocations(); $ctrl.toggleLocations();">
-                    <i id="locate" class="material-icons">place</i>FIND LOCATIONS TO PURCHASE
+                    <i id="locate" class="material-icons">place</i>
+                    <p>FIND LOCATIONS TO PURCHASE</p>
                     <div class="locations" ng-class="{'locations-toggle': $ctrl.activeLocations}">
                         <h4>LOCATIONS:</h4>
                         <ul>

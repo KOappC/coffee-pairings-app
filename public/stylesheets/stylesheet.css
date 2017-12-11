@@ -289,11 +289,17 @@ body {
 .show-locations, .show-pairings, .show-sim-beans {
 	background-color: #e22149;
 	border-radius: 15px;
-	height: 55px;
+	height: inherit;
 	margin: 10px;
 	display: flex;
+    flex-wrap: wrap;
 	align-items: center;
     cursor: pointer;
+}
+
+.show-locations h4, .show-pairings h4, .show-sim-beans h4 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #locate, #pair, #sim {
@@ -355,4 +361,35 @@ body {
 .pairings-toggle, .locations-toggle, .sim-beans-toggle {
     display: flex;
     flex-direction: column;
+}
+
+/* Bean library */
+
+.all-beans {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    top: 100px;
+}
+.all-beans div {
+    background-color: lightpink;
+    margin: 10px;
+    padding: 10px;
+    padding-top: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #3C2E21;
+    cursor: pointer;
+    transition: 0.5s all;
+    border-radius: 15px;
+}
+
+.all-beans p {
+    border-top: 1px solid #E22149;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.all-beans div:hover {
+    background-color: #6583bc;
 }
