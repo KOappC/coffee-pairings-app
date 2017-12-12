@@ -16,7 +16,7 @@
 				<h3>YOUR BEAN IS:</h3>
                 <p class="your-bean"> {{ $ctrl.beanChoice || $ctrl.beanFromBrowse.browseBean }}</p>
                 <div class="extra-details">
-                    <h4>DETAILS:</h4>
+                    <h5>DETAILS:</h5>
                     <ul> {{  }}
                         <li>Region: {{ $ctrl.beanRegion || $ctrl.beanFromBrowse.browseChoice.region }}</li>
                         <li>Altitude: {{ $ctrl.beanAltitude || $ctrl.beanFromBrowse.browseChoice.altitude }}</li>
@@ -63,9 +63,9 @@
                     </div>
                 </div>
             </div>
-			<div class="back-container">
+			<div class="back-container" ng-click="$ctrl.goBack();">
 				BACK
-                <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
+                <i id="back-button" class="material-icons">navigate_before</i>
 			</div>
         </div>
         

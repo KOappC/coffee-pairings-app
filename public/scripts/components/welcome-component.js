@@ -6,7 +6,7 @@
                 <div id="welcome-bean">
                     <img src="./images/bean140px.png" ng-click="$ctrl.flavorTown();" alt="bean">
                 </div>
-                <p id="home-description">Click on the bean to find your perfect coffee, based on flavors that you choose.  Drinking coffee will never be the same.  Welcome to Flavor Town!</p>
+                <p id="home-description">Click on the bean to find your perfect coffee, based on flavors that you choose.<br><br>  Drinking coffee will never be the same.  Welcome to Flavor Town!</p>
             </div>
             <div id="dark-background"></div>
             `,

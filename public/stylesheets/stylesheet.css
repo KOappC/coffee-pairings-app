@@ -19,6 +19,7 @@ body {
 
 #welcome-title {
     margin-top: 50px;
+	font-size: 50px;
 }
 
 #welcome-bean {
@@ -29,10 +30,16 @@ body {
 }
 
 #welcome-bean img {
-    height: 140px;
-    width: 140px;
+    height: 200px;
+    width: 200px;
     margin-top: 20px;
     margin-bottom: 40px;
+	filter: drop-shadow(10px 10px 10px black);
+	transition: 0.5s all;
+}
+
+#welcome-bean img:hover {
+	transform: scale(1.1) rotate(10deg);
 }
 
 #dark-background {
@@ -54,7 +61,8 @@ body {
 
 #home-description {
     margin: 5% 20% 5% 20%;
-   font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+	font-size: 19px;
 }
 
 #ugly-nav {
@@ -91,7 +99,7 @@ body {
 
 .flavor-body {
     position: relative;
-    top: 80px;
+    top: 65px;
 	margin-bottom: 70px;
 }
 
@@ -101,18 +109,20 @@ body {
     position: relative;
 }
 
+/*back button styling*/
 .back-container {
 	position: fixed;
 	bottom: 0;
-	right: 0;
+	left: 0;
 	height: 32px;
 	width: 100%;
 	background-color: #801426;
 	opacity: 50%;
-	text-align: right;
-	line-height: 40px;
-	padding-right: 40px;
+	text-align: left;
+	line-height: 36.7px;
+	padding-left: 40px;
 	transition: 0.5s all;
+	cursor: pointer;
 }
 
 .back-container:hover {
@@ -123,8 +133,7 @@ body {
     position: fixed;
     margin: 0 auto;
     bottom: 5px;
-    right: 10px;
-    cursor: pointer;
+    left: 10px;
 }
 
 #coffee-bean {
@@ -138,6 +147,7 @@ body {
 #coffee-bean img {
     height: 140px;
     width: 140px;
+	filter: drop-shadow(10px 10px 10px #696969);
 }
 
 .little-circles {
@@ -150,6 +160,11 @@ body {
     text-align: center;
     line-height: 95px;
     cursor: pointer;
+	transition: 0.5s all;
+}
+
+.little-circles:hover {
+	filter: brightness(120%);
 }
 
 .little-circles:nth-child(1) {
@@ -216,8 +231,15 @@ body {
 	justify-content: center;
 	font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
+	font-size: 16px;
 	color: white;
     cursor: pointer;
+	transition: 0.5s all;
+/*	figure out word wrap*/
+}
+
+.narrow-circles:hover {
+	filter: brightness(120%);
 }
 
 .narrow-circles:nth-child(1) {
@@ -283,6 +305,9 @@ body {
 	flex-direction: column;
 	color: white;
 	font-family: 'Josefin Sans', sans-serif;
+	box-shadow: 7px 7px 7px #696969;
+	margin: 15px;
+	margin-bottom: 60px;
 }
 
 .flavor-body h4 {
@@ -291,11 +316,18 @@ body {
 	padding-bottom: 0px;
 }
 
+.flavor-body h5 {
+	margin: 20px;
+	padding: 15px;
+	padding-bottom: 0px;
+	font-size: 20px;
+}
+
 .flavor-body h3 {
 	margin: 20px;
 	padding: 15px;
 	padding-bottom: 0px;
-	font-size: 22px;
+	font-size: 24px;
 }
 
 .your-bean {
@@ -303,6 +335,14 @@ body {
 	border-bottom: 4px solid #e22149;
 	padding-bottom: 10px;
 	margin: 20px;
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+ul {
+	margin-left: 20px;
+	font-size: 18px;
+	line-height: 20px;
 }
 
 .show-locations, .show-pairings, .show-sim-beans {
@@ -314,6 +354,11 @@ body {
     flex-wrap: wrap;
 	align-items: center;
     cursor: pointer;
+	transition: 0.5s all;
+}
+
+.show-locations:hover, .show-pairings:hover, .show-sim-beans:hover {
+	filter: brightness(150%);
 }
 
 .show-locations h4, .show-pairings h4, .show-sim-beans h4 {
@@ -333,6 +378,7 @@ body {
 .hidden-menu{
     display: flex;
     justify-content: space-around;
+	align-items: center;
     position: absolute;
     width: 80%;
     height: 80px;
@@ -380,6 +426,7 @@ body {
 .pairings-toggle, .locations-toggle, .sim-beans-toggle {
     display: flex;
     flex-direction: column;
+	flex-wrap: wrap;
 }
 
 /* Bean library */
