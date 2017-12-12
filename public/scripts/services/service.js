@@ -126,26 +126,20 @@
                 finalPairings = [];
                 finalPairings.push(response.data[0].pairing1, response.data[0].pairing2);
                
+               finalSimBeanArray = [];
+
               
-  // this only sort of works......            
+              
                 beanArray = response.data.forEach(function(info) {
-//                    console.log(finalSimBeanArray);
-//                    finalSimBeanArray.push(info.bean);
-//                    console.log(finalSimBeanArray);
+                  console.log(finalSimBeanArray);
                   
                   if (info.bean !== beanPass) {
                     finalSimBeanArray.push(info.bean);
                   }
-                  
-//                  else {
-//                    finalSimBeanArray = ["no similar beans found"];
-//                  }
-//                  
-//                    if (info.bean === beanPass) {
-//                      finalSimBeanArray = ["no similar beans found"];
-//                    } else {}
-  
+                       
+                  console.log(finalSimBeanArray);
                 });
+            
 
 
 

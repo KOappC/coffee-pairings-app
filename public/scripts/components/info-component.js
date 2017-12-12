@@ -37,6 +37,7 @@
 			            <h4>SIMILAR BEANS:</h4>
                         <ul>
                             <li ng-repeat="items in $ctrl.simBean track by $index"> {{ items }} </li>
+                            <p ng-show="$ctrl.simBean.length === 0">There are no similar beans.</p>
                         </ul>
                     </div>
                 </div>
