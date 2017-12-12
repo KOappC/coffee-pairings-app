@@ -92,6 +92,7 @@ body {
 .flavor-body {
     position: relative;
     top: 80px;
+	margin-bottom: 70px;
 }
 
 .broad {
@@ -100,10 +101,28 @@ body {
     position: relative;
 }
 
+.back-container {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 32px;
+	width: 100%;
+	background-color: #801426;
+	opacity: 50%;
+	text-align: right;
+	line-height: 40px;
+	padding-right: 40px;
+	transition: 0.5s all;
+}
+
+.back-container:hover {
+	background-color: #6583bc;
+}
+
 #back-button {
     position: fixed;
     margin: 0 auto;
-    bottom: 10px;
+    bottom: 5px;
     right: 10px;
     cursor: pointer;
 }

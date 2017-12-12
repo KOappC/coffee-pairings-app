@@ -22,7 +22,10 @@
                 <div class="narrow">
                     <div class="narrow-circles" ng-repeat="items in $ctrl.narrowFlav" href="" ng-click="$ctrl.getSubFlavor(items);"> {{ items }} </div>
                 </div>
-                <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">refresh</i>
+				<div class="back-container">
+					REFRESH
+                	<i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">refresh</i>
+				</div>
             </div>
 `,
         controller: function(FlavorService, $location, $route) {

@@ -63,7 +63,10 @@
                     </div>
                 </div>
             </div>
-            <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
+			<div class="back-container">
+				BACK
+                <i id="back-button" class="material-icons" ng-click="$ctrl.goBack();">navigate_before</i>
+			</div>
         </div>
         
         `,
