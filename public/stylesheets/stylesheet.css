@@ -404,6 +404,7 @@ ul {
 
 .locations, .pairings, .sim-beans {
     display: none;
+	height: 0px;
 }
 
 .menu-toggle {
@@ -427,6 +428,8 @@ ul {
     display: flex;
     flex-direction: column;
 	flex-wrap: wrap;
+	height: inherit;
+	transition: 0.5s all;
 }
 
 /* Bean library */
