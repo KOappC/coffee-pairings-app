@@ -429,6 +429,16 @@ ul {
 	flex-wrap: wrap;
 	height: inherit;
 	transition: 0.5s all;
+	width: 80%;
+}
+
+.sim-beans-toggle p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.show-sim-beans p, .show-parings p, .show-locations p {
+    width: 80%;
 }
 
 /* Bean library */
