@@ -116,13 +116,12 @@ body {
 	left: 0;
 	height: 32px;
 	width: 100%;
-	background-color: #801426;
-	opacity: 50%;
 	text-align: left;
 	line-height: 36.7px;
 	padding-left: 40px;
 	transition: 0.5s all;
 	cursor: pointer;
+    font-size: 10px;
 }
 
 .back-container:hover {
