@@ -195,7 +195,7 @@
   
     /* INFO PAGE */
     .flavor-body {
-      max-width: 70%;
+      width: 600px;
       margin: 0 auto;
 	  margin-bottom: 60px;
     }
@@ -205,5 +205,15 @@
 		justify-content: space-evenly;
 	}
 	
-	
+	/* BEANS LIBRARY */
+
+    .all-beans {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bean-details {
+        width: 300px;
+    }
 }
