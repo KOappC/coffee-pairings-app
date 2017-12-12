@@ -15,7 +15,7 @@
             <div class="all-beans">
                 <div class="bean-details" ng-repeat="items in $ctrl.pullLibrary" ng-click="$ctrl.getBrowseBean(items.bean);">
                     {{ items.bean }}
-                    <p>CLICK FOR MORE INFO</p> 
+                    <p>Click for more information</p> 
                 </div>
             </div>
 `,

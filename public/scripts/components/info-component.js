@@ -54,7 +54,7 @@
                 </div>
                 <div class="show-locations" ng-click="$ctrl.getLocations(); $ctrl.toggleLocations();">
                     <i id="locate" class="material-icons">place</i>
-                    <p>FIND LOCATIONS TO PURCHASE</p>
+                    <p>FIND LOCATIONS</p>
                     <div class="locations" ng-class="{'locations-toggle': $ctrl.activeLocations}">
                         <h4>LOCATIONS:</h4>
                         <ul>

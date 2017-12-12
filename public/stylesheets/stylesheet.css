@@ -34,7 +34,7 @@ body {
     width: 200px;
     margin-top: 20px;
     margin-bottom: 40px;
-	filter: drop-shadow(10px 10px 10px black);
+/*	filter: drop-shadow(10px 10px 10px black);*/
 	transition: 0.5s all;
 }
 
@@ -235,7 +235,7 @@ body {
 	color: white;
     cursor: pointer;
 	transition: 0.5s all;
-/*	figure out word wrap*/
+	white-space: pre-wrap;
 }
 
 .narrow-circles:hover {
@@ -442,23 +442,36 @@ ul {
     top: 100px;
 }
 .all-beans div {
-    background-color: lightpink;
+    background-color: #801426;
     margin: 10px;
     padding: 10px;
     padding-top: 15px;
     font-family: 'Josefin Sans', sans-serif;
-    color: #3C2E21;
+    color: white;
     cursor: pointer;
     transition: 0.5s all;
     border-radius: 15px;
+	text-transform: uppercase;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.all-beans div:nth-child(even) {
+	background-color: #6583bc;
+}
+
+.all-beans div:nth-child(even):hover {
+	background-color: lightpink;
 }
 
 .all-beans p {
-    border-top: 1px solid #E22149;
+    border-top: 2px solid #E22149;
     padding-top: 10px;
     margin-top: 5px;
+	text-transform: capitalize;
+	margin-bottom: 3px;
 }
 
 .all-beans div:hover {
-    background-color: #6583bc;
+    background-color: #aac2e8;
 }
