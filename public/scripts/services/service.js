@@ -135,7 +135,7 @@
                   if (info.bean !== beanPass) {
                     finalSimBeanArray.push(info.bean);
                   }
-                       
+
                 });
             
 
