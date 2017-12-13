@@ -131,13 +131,11 @@
               
               
                 beanArray = response.data.forEach(function(info) {
-                  console.log(finalSimBeanArray);
                   
                   if (info.bean !== beanPass) {
                     finalSimBeanArray.push(info.bean);
                   }
                        
-                  console.log(finalSimBeanArray);
                 });
             
 
