@@ -1,6 +1,12 @@
 /*@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,700,800,800i');*/
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+@import url('https://fonts.googleapis.com/css?family=Marvel');
 
 body {
     background-color: #BEB5A4;
@@ -150,7 +156,7 @@ body {
 }
 
 .little-circles {
-	font-family: 'Josefin Sans', sans-serif;
+/*	font-family: 'Josefin Sans', sans-serif;*/
     font-weight: 400;
 	color: white;
     border-radius: 50%;
@@ -163,10 +169,12 @@ body {
 }
 
 .little-circles:hover {
-	filter: brightness(120%);
+	filter: brightness(130%);
 }
 
 .little-circles:nth-child(1) {
+	font-family: 'Amatic SC', cursive;
+	font-size: 35px;
     position: absolute;
     top: -10px;
     left: 10px;
@@ -176,6 +184,8 @@ body {
 }
 
 .little-circles:nth-child(2) {
+	font-family: 'Reenie Beanie', cursive;
+	font-size: 30px;
     position: absolute;
     top: 35px;
     left: 110px;
@@ -185,6 +195,8 @@ body {
 }
 
 .little-circles:nth-child(3) {
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
     position: absolute;
     top: 110px;
     left: 200px;
@@ -194,6 +206,8 @@ body {
 }
 
 .little-circles:nth-child(4) {
+	font-family: 'Marvel', sans-serif;
+	font-size: 30px;
     position: absolute;
     top: 220px;
     left: 200px;
@@ -203,6 +217,9 @@ body {
 }
 
 .little-circles:nth-child(5) {
+	font-family: 'Bungee', cursive;
+	font-size: 27px;
+	color: #3c2e21;
     position: absolute;
     top: 290px;
     left: 110px;
@@ -212,6 +229,8 @@ body {
 }
 
 .little-circles:nth-child(6) {
+	font-family: 'Sacramento', cursive;
+	font-size: 38px;
     position: absolute;
     top: 335px;
     left: 10px;
@@ -305,7 +324,7 @@ body {
 	color: white;
 	font-family: 'Josefin Sans', sans-serif;
 	box-shadow: 7px 7px 7px #696969;
-	margin: 15px;
+	margin: 20px;
 	margin-bottom: 60px;
 }
 
@@ -383,11 +402,11 @@ ul {
     height: 80px;
     left: 0;
     top: -500px;
-    transition: 0.5s all;
 }
 
 .hidden-menu-hover:hover{
-    color: deeppink;
+    color: white;
+	transition: 0.5s all;
 }
 
 #hamburger {
@@ -421,6 +440,7 @@ ul {
     top: 0;
     left: 0;
     cursor: pointer;
+	transition: 0.5s all;
 }
 
 .pairings-toggle, .locations-toggle, .sim-beans-toggle {
