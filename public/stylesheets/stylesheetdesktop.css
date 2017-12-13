@@ -63,6 +63,12 @@
         margin: 0 auto;
 		margin-bottom: 60px;
     }
+	
+	.test {
+		background-color: none;
+		border: 0;
+		margin: 0;
+	}
 
     #coffee-bean {
         display: none;
