@@ -53,10 +53,11 @@
         position: absolute;
         justify-content: center;
         justify-self: center;
-        align-self: center;
+		align-self: center;
+		width: 900px;
+		align-content: center;
         margin: 0 auto;
 		margin-bottom: 60px;
-        width: 900px;
     }
 
     #coffee-bean {
@@ -135,8 +136,8 @@
       flex-wrap: wrap;
       margin: 0 auto;
       font-size: 24px;
-      align-self: center;
-      width: 900px;
+	  align-self: center;
+	  width: 900px;
     }
 
     .narrow-circles {

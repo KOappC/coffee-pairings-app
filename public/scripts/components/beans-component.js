@@ -38,7 +38,6 @@
 
             FlavorService.setLibrary().then(function() {
                 $ctrl.pullLibrary = FlavorService.getLibrary();
-                console.log($ctrl.pullLibrary);
             });
 
             $ctrl.beanChoice = "";
