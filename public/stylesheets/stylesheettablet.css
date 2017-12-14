@@ -204,6 +204,7 @@
       width: 600px;
       margin: 0 auto;
 	  margin-bottom: 60px;
+	  margin-top: 20px;
     }
 	
 	.menu-toggle {
@@ -222,4 +223,8 @@
     .bean-details {
         width: 300px;
     }
+	
+	.back-container {
+		font-size: 16px;
+	}
 }

@@ -328,6 +328,10 @@ body {
 	margin-bottom: 60px;
 }
 
+.extra-details {
+	text-transform: capitalize;
+}
+
 .flavor-body h4 {
 	margin: 20px;
 	padding: 15px;
@@ -361,6 +365,7 @@ ul {
 	margin-left: 20px;
 	font-size: 18px;
 	line-height: 20px;
+	list-style-type: none;
 }
 
 .show-locations, .show-pairings, .show-sim-beans {
@@ -373,6 +378,7 @@ ul {
 	align-items: center;
     cursor: pointer;
 	transition: 0.5s all;
+	text-transform: capitalize;
 }
 
 .show-locations:hover, .show-pairings:hover, .show-sim-beans:hover {

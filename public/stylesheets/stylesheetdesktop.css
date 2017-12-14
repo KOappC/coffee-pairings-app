@@ -205,6 +205,11 @@
       max-width: 70%;
       margin: 0 auto;
 	  margin-bottom: 60px;
+	  margin-top: 20px;
     }
+	
+	.back-container {
+		font-size: 17px;
+	}
     
 }
