@@ -21,6 +21,12 @@ body {
     color: #BEB5A4;
     display: inline-block;
     padding-top: 10px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.page-title:hover{
+  color: white;
 }
 
 #welcome-title {
@@ -476,7 +482,7 @@ ul {
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
-    top: 100px;
+    top: 70px;
 }
 .all-beans div {
     background-color: #801426;
