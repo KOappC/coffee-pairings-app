@@ -2,7 +2,7 @@
     var broadComponent = {
         template: `
             <div class="menu-bar">
-                <h1 class="page-title">Flavor Town</h1>
+                <h1 class="page-title" ng-click="$ctrl.goHome();">Flavor Town</h1>
                 <i id="hamburger" class="material-icons" ng-click="$ctrl.toggleMenu();">dehaze</i>
             </div>
             
