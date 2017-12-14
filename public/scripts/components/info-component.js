@@ -48,8 +48,8 @@
                         <h4>PAIRINGS:</h4>
                         <ul>
                             <li ng-repeat="foods in $ctrl.getPairings track by $index"> {{ foods }} </li>
-                    <!--    <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing1 }} </li>
-                            <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing2 }} </li>     -->
+                            <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing1 }} </li>
+                            <li> {{ $ctrl.beanFromBrowse.browseChoice.pairing2 }} </li>
                         </ul>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
             $ctrl.getPairings = FlavorService.getPairings();
             $ctrl.getLocations = function() {
                 for (var i = 0; i < $ctrl.locArr.length; i++) {
-                    if ($ctrl.beanChoice === $ctrl.locArr[i].name) {
+                    if ($ctrl.beanChoice === $ctrl.locArr[i].name || $ctrl.beanFromBrowse.browseBean === $ctrl.locArr[i].name) {
                         $ctrl.finalLoc = $ctrl.locArr[i].location;
                     }
                 }
