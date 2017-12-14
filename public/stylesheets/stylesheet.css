@@ -326,6 +326,7 @@ body {
 	box-shadow: 7px 7px 7px #696969;
 	margin: 20px;
 	margin-bottom: 60px;
+    margin-top: 3px;
 }
 
 .extra-details {
@@ -343,6 +344,7 @@ body {
 	padding: 15px;
 	padding-bottom: 0px;
 	font-size: 20px;
+    margin-top: 3px;
 }
 
 .flavor-body h3 {
